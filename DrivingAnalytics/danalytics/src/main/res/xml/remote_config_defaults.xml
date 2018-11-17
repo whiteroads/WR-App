@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>upload_time_in_mins</key>
+        <value>2</value>
+    </entry>
+    <entry>
+        <key>frequency_seconds</key>
+        <value>30</value>
+    </entry>
+
+</defaultsMap>

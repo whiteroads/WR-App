@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        config {
+            keyAlias 'robo'
+            keyPassword 'robo123@#'
+            storeFile file('/Users/rahulgoyal/Desktop/robonew.keystore')
+            storePassword 'robo123@#'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.analytics.drivinganalytics"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0_beta"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard.cfg'
+            signingConfig signingConfigs.config
+            debuggable true
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.facebook.android:facebook-loginkit:4.36.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+//    implementation(name: 'danalytics-release', ext: 'aar')
+    implementation project(':danalytics')
+}
+
+apply plugin: 'com.google.gms.google-services'
