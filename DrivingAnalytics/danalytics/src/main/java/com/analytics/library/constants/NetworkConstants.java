@@ -3,7 +3,7 @@ package com.analytics.library.constants;
 public class NetworkConstants {
 
     public static final String TAG = "ExceptionLog";
-    public static final String BASE_URL = "http://35.200.187.174:8080/";
+    public static final String BASE_URL = "http://api.whiteroads.ai:8585/";
     public static final String STORE_CAPTURE_DATA = "user/store_data.ns";
     public static final String STORE_CAPTURE_DATA_LOCATIONS = "user/store_data_locations.ns";
     public static final String STORE_CAPTURE_DATA_STEPS = "user/store_data_steps.ns";
