@@ -1,0 +1,929 @@
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-loginkit-4.36.0.aar/514a59dd0edf90710dfea19e60ce03c7/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/e47da68b8d08f026ff021c4a5b2b6d2e/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-login-4.36.0.aar/3e17e483e670af47d8051da20b107465/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/1fb4e8cb3d1a11a4e076d622f133a4bc/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/0e1939eda9c6f815b6e8f4c757b2b3f3/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/e67f5b704ced47d4eec859051d890292/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/f872c65348c1bf8c92b6e091032257e1/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/c567924e5857333239633a91ce06a58b/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/9d97371450ce3a83bf82c8f7430c3f04/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0b5b90755e1d112396c420bee8f2b71d/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/329ab50044fe74d3e0cdc32f45c80665/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0/49eb3ad545e7701234e4dd83db8dc1344b577f23/converter-gson-2.0.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/ea78fba172c2d1d2b7d1b56043c0694d/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ece9ae5d83ab1c9eeb9888963b6d7ddb/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-core-4.36.0.aar/3dbe42f8836c310dd0c09917f091802a/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/libphonenumber/8.9.10/633a1c3328ac15549b7ebff8f437ed90f09c237d/libphonenumber-8.9.10.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/08a5d29a1a82827fbcb381f4e45fc6f4/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/b77442d872958c16183c9983f689fdba/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/5731390846ec60fcc6bbf315d77a106c/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/0fc5551712b1d32c0819e89d2dff164a/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/9c185fabff8625740aa6a6af1b5a1311/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/ee835d3665e2790b41ca846ce9372679/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/502bd5530cc1e6d2f7495c4f4f377b8e/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/a9b48ff5ede15357405a00920a0de483/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6f9a2703e29973e04d290696f12693d9/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/69fb4ad3e8b94db693bf46d75aa7500c/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/common/1.1.1/8094cc50760b9ac665a8ea76b51888f70042e2b5/common-1.1.1.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/58a0a0dc55da5eeaa511c7010866a04a/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/69e4c8e38f3b783087b7d8060bcbffd1/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dfd42dc90f5386357763d494952fcb60/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/d3811ddd02c4f72fd198099559bcc133/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/cf1829ef867b6c9fe47874f80a41f5ca/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.2/b9ef4342c934a1a8b107506273dc8061662a322/support-annotations-27.0.2.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar(**.class)
+-injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/intermediates/intermediate-jars/release/classes.jar(**.class)
+-injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/classes/release(**.class)
+-injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
+-outjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/transforms/proguard/release/0.jar
+
+-libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar(**.class)
+-libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/android.jar
+-libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/optional/org.apache.http.legacy.jar
+-libraryjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/libs
+
+-forceprocessing
+-printusage /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/usage.txt
+-dontoptimize
+-optimizations !code/simplification/arithmetic,!method/inlining/*
+-optimizationpasses 5
+-allowaccessmodification
+-printmapping /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/mapping.txt
+-dontusemixedcaseclassnames
+-repackageclasses ''
+-keepattributes *Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,*Annotation*,Signature,InnerClasses,EnclosingMethod,*Annotation*,*Annotation*,*Annotation*
+-verbose
+-dontnote com.android.vending.licensing.ILicensingService,com.google.vending.licensing.ILicensingService,com.google.android.vending.licensing.ILicensingService,android.support.**
+-dontwarn javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,com.gc.materialdesign.views.**,com.parse.**,com.facebook.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,okio.**,retrofit2.Platform$Java8,android.support.**,android.util.FloatMath,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**,android.arch.persistence.room.paging.**
+-printconfiguration /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/config.txt
+-dump /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/dump.txt
+-printseeds /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/seeds.txt
+
+
+-keep public class com.analytics.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.parse.* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.facebook.** {
+    <fields>;
+    <methods>;
+}
+
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface
+    <methods>;
+}
+
+-keep public class org.apache.** {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+-keep class com.facebook.ads.** {
+    <fields>;
+    <methods>;
+}
+
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context,android.util.AttributeSet);
+    public <init>(android.content.Context,android.util.AttributeSet,int);
+    public void set*(...);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet,int);
+}
+
+-keepclassmembers class * extends android.content.Context {
+    public void *(android.view.View);
+    public void *(android.view.MenuItem);
+}
+
+-keepclassmembers class * extends android.os.Parcelable {
+    static ** CREATOR;
+}
+
+-keep,allowshrinking class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface
+    <methods>;
+}
+
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+# -injars libs/nineoldandroids-2.4.0.jar
+-keepclasseswithmembers class com.google.api.** {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers class com.google.android.** {
+    <fields>;
+    <methods>;
+}
+
+# Required for attribution
+-keep class com.google.android.gms.** {
+    <fields>;
+    <methods>;
+}
+
+-keep interface  com.google.android.gms.** {
+    <fields>;
+    <methods>;
+}
+
+# Required for Google Play Services (see http://developer.android.com/google/play-services/setup.html)
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keep,allowshrinking @com.google.android.gms.common.annotation.KeepName class *
+
+-keepclassmembers,allowshrinking class * {
+    @com.google.android.gms.common.annotation.KeepName
+    <fields>;
+    @com.google.android.gms.common.annotation.KeepName
+    <methods>;
+}
+
+# DrawerLayout Listener
+-keepclassmembers class android.support.v4.widget.DrawerLayout {
+    private android.support.v4.widget.DrawerLayout$DrawerListener mListener;
+}
+
+-keep interface  org.parceler.Parcel
+
+-keep @org.parceler.Parcel class * {
+    <fields>;
+    <methods>;
+}
+
+-keep class **$$Parcelable {
+    <fields>;
+    <methods>;
+}
+
+-keep class java.beans.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class sun.reflect.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class sun.nio.ch.** {
+    <fields>;
+    <methods>;
+}
+
+-keep public class com.analytics.library.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keepclassmembers class * extends java.io.Serializable {
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep,allowshrinking class com.facebook.FacebookActivity
+
+-keep,allowshrinking class com.facebook.CustomTabActivity
+
+-keep class com.facebook.login.Login
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keep,allowshrinking @com.google.android.gms.common.annotation.KeepName class *
+
+-keepclassmembers,allowshrinking class * {
+    @com.google.android.gms.common.annotation.KeepName
+    <fields>;
+    @com.google.android.gms.common.annotation.KeepName
+    <methods>;
+}
+
+-keep,allowshrinking class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_bottom_navigation_item.xml:26
+-keep class android.support.design.internal.BaselineLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_navigation_item.xml:17
+-keep class android.support.design.internal.NavigationMenuItemView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_navigation_menu.xml:17
+-keep class android.support.design.internal.NavigationMenuView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_layout_snackbar_include.xml:18
+-keep class android.support.design.internal.SnackbarContentLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/activity_home.xml:15
+-keep class android.support.design.widget.BottomNavigationView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_text_input_password_icon.xml:18
+-keep class android.support.design.widget.CheckableImageButton {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_bottom_sheet_dialog.xml:26
+-keep class android.support.design.widget.CoordinatorLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout-sw600dp-v13/design_layout_snackbar.xml:18
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_layout_snackbar.xml:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_material.xml:41
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/fragment_analysis.xml:1
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/fragment_sensors.xml:1
+-keep class android.support.v4.widget.NestedScrollView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_button_bar_material.xml:43
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_material.xml:52
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_material.xml:66
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_title_material.xml:56
+-keep class android.support.v4.widget.Space {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_select_dialog_material.xml:23
+-keep class android.support.v7.app.AlertController$RecycleListView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_action_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ActionMenuItemView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_expanded_menu_layout.xml:17
+-keep class android.support.v7.view.menu.ExpandedMenuView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_list_menu_item_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_popup_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ListMenuItemView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout-v26/abc_screen_toolbar.xml:27
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_toolbar.xml:27
+-keep class android.support.v7.widget.ActionBarContainer {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout-v26/abc_screen_toolbar.xml:44
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_action_mode_bar.xml:19
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_toolbar.xml:43
+-keep class android.support.v7.widget.ActionBarContextView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout-v26/abc_screen_toolbar.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_toolbar.xml:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_action_menu_layout.xml:17
+-keep class android.support.v7.widget.ActionMenuView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_activity_chooser_view.xml:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_material.xml:18
+-keep class android.support.v7.widget.AlertDialogLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/1fb4e8cb3d1a11a4e076d622f133a4bc/res/layout/com_facebook_device_auth_dialog_fragment.xml:45
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/1fb4e8cb3d1a11a4e076d622f133a4bc/res/layout/com_facebook_smart_device_dialog_fragment.xml:47
+-keep class android.support.v7.widget.AppCompatImageView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_button_bar_material.xml:26
+-keep class android.support.v7.widget.ButtonBarLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/1fb4e8cb3d1a11a4e076d622f133a4bc/res/layout/com_facebook_device_auth_dialog_fragment.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/1fb4e8cb3d1a11a4e076d622f133a4bc/res/layout/com_facebook_smart_device_dialog_fragment.xml:22
+-keep class android.support.v7.widget.CardView {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_content_include.xml:19
+-keep class android.support.v7.widget.ContentFrameLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_title_material.xml:45
+-keep class android.support.v7.widget.DialogTitle {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_simple_overlay_action_mode.xml:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_dialog_title_material.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_simple.xml:17
+-keep class android.support.v7.widget.FitWindowsLinearLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_search_view.xml:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout-v26/abc_screen_toolbar.xml:37
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_toolbar.xml:36
+-keep class android.support.v7.widget.Toolbar {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_simple.xml:25
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_screen_simple_overlay_action_mode.xml:32
+-keep class android.support.v7.widget.ViewStubCompat {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:24
+-keep class com.analytics.drivinganalytics.DAApplication {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:36
+-keep class com.analytics.drivinganalytics.HomeActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:49
+-keep class com.analytics.drivinganalytics.LoginActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:111
+-keep class com.analytics.library.receivers.SensorRestartBroadcastReceiver {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:129
+-keep class com.analytics.library.services.DetectedActivitiesIntentService {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:121
+-keep class com.analytics.library.services.LocationService {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:117
+-keep class com.analytics.library.services.SensorService {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:155
+-keep class com.facebook.CurrentAccessTokenExpirationBroadcastReceiver {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:61
+-keep class com.facebook.CustomTabActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:132
+-keep class com.facebook.CustomTabMainActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:56
+-keep class com.facebook.FacebookActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:92
+-keep class com.facebook.accountkit.internal.AccountKitInitProvider {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:73
+-keep class com.facebook.accountkit.ui.AccountKitActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:79
+-keep class com.facebook.accountkit.ui.AccountKitEmailRedirectActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_phone_login_top.xml:31
+-keep class com.facebook.accountkit.ui.AccountKitSpinner {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_activity_layout.xml:26
+-keep class com.facebook.accountkit.ui.AspectFrameLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_email_login_top.xml:29
+-keep class com.facebook.accountkit.ui.ClearBackgroundTextInputLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_activity_layout.xml:47
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml:28
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_confirmation_code_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_email_login_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_email_login_text.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_email_login_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_email_verify_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_error_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_phone_login_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_phone_login_text.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_phone_login_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_resend_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_fragment_title.xml:22
+-keep class com.facebook.accountkit.ui.ConstrainedLinearLayout {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/099ddc0011b85498655c3c100fe308c2/res/layout/com_accountkit_confirmation_code_input.xml:22
+-keep class com.facebook.accountkit.ui.NotifyingEditText {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:150
+-keep class com.facebook.internal.FacebookInitProvider {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:106
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:97
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:133
+-keep class com.google.android.gms.common.api.GoogleApiActivity {
+    <init>(...);
+}
+
+-keep public class com.google.vending.licensing.ILicensingService
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keep public class com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface
+    <methods>;
+}
+
+# Understand the @Keep support annotation.
+-keep class android.support.annotation.Keep
+
+-keep @android.support.annotation.Keep class * {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <init>(...);
+}
+
+# 
+# Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
+# 
+# You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
+# copy, modify, and distribute this software in source code or binary form for use
+# in connection with the web services and APIs provided by Facebook.
+# 
+# As with any software that integrates with the Facebook platform, your use of
+# this software is subject to the Facebook Developer Principles and Policies
+# [http://developers.facebook.com/policy/]. This copyright notice shall be
+# included in all copies or substantial portions of the software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-keep class com.facebook.FacebookSdk {
+    boolean isInitialized();
+}
+
+-keep class com.facebook.appevents.AppEventsLogger {
+    com.facebook.appevents.AppEventsLogger newLogger(android.content.Context);
+    void logSdkEvent(java.lang.String,java.lang.Double,android.os.Bundle);
+}
+
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+# 
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+# 
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+# Add any project specific keep options here:
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+# -keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+# }
+-keepclassmembers class * extends java.io.Serializable {
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep,allowshrinking class com.facebook.FacebookActivity
+
+-keep,allowshrinking class com.facebook.CustomTabActivity
+
+-keep class com.facebook.login.Login
+
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+# 
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+# 
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+# Add any project specific keep options here:
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+# -keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+# }
+-keepclassmembers class * extends java.io.Serializable {
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep,allowshrinking class com.facebook.FacebookActivity
+
+-keep,allowshrinking class com.facebook.CustomTabActivity
+
+-keep class com.facebook.common.Common
+
+# Copyright (C) 2015 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# CoordinatorLayout resolves the behaviors of its child components with reflection.
+-keep public class * extends android.support.design.widget.CoordinatorLayout$Behavior {
+    public <init>(android.content.Context,android.util.AttributeSet);
+    public <init>();
+}
+
+# b/35135904 Ensure that proguard will not strip the mResultGuardian.
+-keepclassmembers class com.google.android.gms.common.api.internal.BasePendingResult {
+    com.google.android.gms.common.api.internal.BasePendingResult$ReleasableResultGuardian mResultGuardian;
+}
+
+# Proguard flags for consumers of the Google Play services SDK
+# https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
+# Keep SafeParcelable NULL value, needed for reflection by DowngradeableSafeParcel
+-keepclassmembers public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+# Needed for Parcelable/SafeParcelable classes & their creators to not get renamed, as they are
+# found via reflection.
+-keep class com.google.android.gms.common.internal.ReflectedParcelable
+
+-keep,allowshrinking class * extends com.google.android.gms.common.internal.ReflectedParcelable
+
+-keepclassmembers class * extends android.os.Parcelable {
+    public static final *** CREATOR;
+}
+
+# Keep the classes/members we need for client functionality.
+-keep @interface  android.support.annotation.Keep
+
+-keep @android.support.annotation.Keep class *
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <methods>;
+}
+
+# Keep the names of classes/members we need for client functionality.
+-keep @interface  com.google.android.gms.common.annotation.KeepName
+
+-keep,allowshrinking @com.google.android.gms.common.annotation.KeepName class *
+
+-keepclassmembers,allowshrinking class * {
+    @com.google.android.gms.common.annotation.KeepName
+    <fields>;
+    @com.google.android.gms.common.annotation.KeepName
+    <methods>;
+}
+
+# Keep Dynamite API entry points
+-keep @interface  com.google.android.gms.common.util.DynamiteApi
+
+-keep @com.google.android.gms.common.util.DynamiteApi public class * {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class * extends android.arch.persistence.room.RoomDatabase
+
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+# 
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+# 
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+# Add any project specific keep options here:
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+# -keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+# }
+-keepclassmembers class * extends java.io.Serializable {
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep,allowshrinking class com.facebook.FacebookActivity
+
+-keep,allowshrinking class com.facebook.CustomTabActivity
+
+-keep class com.facebook.core.Core
+
+-keep public class com.android.vending.billing.IInAppBillingService {
+    public static com.android.vending.billing.IInAppBillingService asInterface(android.os.IBinder);
+    public android.os.Bundle getSkuDetails(int,java.lang.String,java.lang.String,android.os.Bundle);
+}
+
+# Copyright (C) 2016 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# keep setters in VectorDrawables so that animations can still work.
+-keepclassmembers class android.support.graphics.drawable.VectorDrawableCompat$* {
+    void set*(***);
+    *** get*();
+}
+
+# Copyright (C) 2015 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# When layoutManager xml attribute is used, RecyclerView inflates
+# LayoutManagers' constructors using reflection.
+-keep public class * extends android.support.v7.widget.RecyclerView$LayoutManager {
+    public <init>(...);
+}
+
+# Copyright (C) 2017 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# FragmentTransitionSupport is instantiated in support-fragment via reflection.
+-keep public class android.support.transition.FragmentTransitionSupport
+
+# Keep a field in transition that is used to keep a reference to weakly-referenced object
+-keepclassmembers class android.support.transition.ChangeBounds$* extends android.animation.AnimatorListenerAdapter {
+    android.support.transition.ChangeBounds$ViewBounds mViewBounds;
+}
+
+# Copyright (C) 2017 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Prevent Parcelable objects from being removed or renamed.
+-keep class android.support.v4.media.** extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers enum  android.arch.lifecycle.Lifecycle$Event {
+    <fields>;
+}
+
+-keep class * extends android.arch.lifecycle.LifecycleObserver
+
+-keep class * extends android.arch.lifecycle.GeneratedAdapter {
+    <init>(...);
+}
+
+-keepclassmembers class ** {
+    @android.arch.lifecycle.OnLifecycleEvent
+    <fields>;
+    @android.arch.lifecycle.OnLifecycleEvent
+    <methods>;
+}
+
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String,int);
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+}

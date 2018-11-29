@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'io.fabric'
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0_library"
+        resConfig "en"
+        resConfigs "mdpi"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+
+        sourceSets {
+            androidTest.assets.srcDirs +=
+                    files("$projectDir/schemas".toString())
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard.cfg'
+            debuggable false
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+//    implementation 'com.google.firebase:firebase-config:16.1.0'
+//    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+//    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+}
