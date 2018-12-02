@@ -2,10 +2,14 @@ package com.whiteroads.library.services;
 
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -21,6 +25,7 @@ import com.whiteroads.library.BuildConfig;
 import com.whiteroads.library.LibraryApplication;
 import com.whiteroads.library.R;
 import com.whiteroads.library.constants.IntentConstants;
+import com.whiteroads.library.constants.NetworkConstants;
 import com.whiteroads.library.data.SensorsDataWrapper;
 import com.whiteroads.library.data.UserDataWrapper;
 import com.whiteroads.library.model.CaptureModel;
@@ -53,23 +58,58 @@ public class SensorService extends Service implements SensorEventListener {
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
             super.onStartCommand(intent, flags, startId);
-            this.intent = intent;
             if(!UserDataWrapper.getInstance().isServiceStopped()) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    builder = new Notification.Builder(SensorService.this, "default")
-                            .setContentTitle(getString(R.string.app_name))
-                            .setContentText("Data is being captured!!")
-                            .setAutoCancel(false);
+                this.intent = intent;
+                if (!UserDataWrapper.getInstance().isServiceStopped()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        createNotificationChannel();
+                        builder = new Notification.Builder(SensorService.this, NetworkConstants.ChannelId)
+                                .setContentTitle(getString(R.string.app_name))
+                                .setSmallIcon(R.drawable.notif_icon)
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                        R.drawable.icon_white))
+                                .setContentText("Capturing Sensors Data...")
+                                .setAutoCancel(false);
 
-                    Notification notification = builder.build();
-                    startForeground(1, notification);
+                        Notification notification = builder.build();
+                        startForeground(12345, notification);
+                    }
+                    new StartAsync().execute();
                 }
-                new StartAsync().execute();
+            }else{
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    stopForeground(true);
+                }else{
+                    stopService(intent);
+                }
             }
         }catch (Exception e){
             e.printStackTrace();
         }
         return START_STICKY;
+    }
+
+    private void createNotificationChannel() {
+        try {
+            // Create the NotificationChannel, but only on API 26+ because
+            // the NotificationChannel class is new and not in the support library
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                CharSequence name = "Whiteroads Notifications";
+                String description = "Persistent Notification for Data capturing";
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                NotificationChannel channel = new NotificationChannel(NetworkConstants.ChannelId, name, importance);
+                channel.setDescription(description);
+                channel.setSound(null, null);
+                channel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+                channel.setLightColor(Color.BLUE);
+                // Register the channel with the system; you can't change the importance
+                // or other notification behaviors after this
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.createNotificationChannel(channel);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Nullable

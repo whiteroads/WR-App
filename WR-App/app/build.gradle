@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'robo'
-            keyPassword 'robo123@#'
-            storeFile file('/Users/rahulgoyal/Desktop/robonew.keystore')
-            storePassword 'robo123@#'
+            keyAlias 'whiteroads'
+            keyPassword 'whiteroads@123'
+            storeFile file('/Users/rahulgoyal/whiteroads.keystore')
+            storePassword 'whiteroads@123'
         }
     }
     compileSdkVersion 27
@@ -25,15 +25,14 @@ android {
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard.cfg'
-            signingConfig signingConfigs.config
-            debuggable true
+            debuggable false
         }
-
         debug {
             minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
             debuggable true
+            signingConfig signingConfigs.config
         }
     }
     repositories {
@@ -49,7 +48,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.facebook.android:facebook-loginkit:4.36.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-//    implementation(name: 'danalytics-release', ext: 'aar')
     implementation project(':wr-library')
 }
 

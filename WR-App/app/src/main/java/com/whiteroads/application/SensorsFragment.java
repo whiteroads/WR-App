@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.whiteroads.library.StartService;
+import com.whiteroads.library.data.UserDataWrapper;
 import com.whiteroads.library.interfaces.DataEventListener;
 
 public class SensorsFragment extends Fragment implements DataEventListener {
@@ -49,7 +50,8 @@ public class SensorsFragment extends Fragment implements DataEventListener {
                 @Override
                 public void onClick(View view) {
                     try {
-
+                        ((HomeActivity)getActivity()).startService.stopAllServices();
+                        stopCapture.setVisibility(View.GONE);
                     }catch (Exception e){
                         e.printStackTrace();
                     }

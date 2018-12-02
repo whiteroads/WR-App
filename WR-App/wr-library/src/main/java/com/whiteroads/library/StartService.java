@@ -245,9 +245,25 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
             e.printStackTrace();
         }
     }
+    public boolean stopAllServices(){
+        try{
+            UserDataWrapper.getInstance().setIsServicesStopped(true);
+            if(sensors!=null) {
+                context.stopService(sensors);
+            }
+            if(service!=null) {
+                context.stopService(service);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     private void startAllServices() {
         try {
+            UserDataWrapper.getInstance().setIsServicesStopped(false);
             if (ContextCompat.checkSelfPermission(context,
                     android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     || ActivityCompat.checkSelfPermission(context,
@@ -281,19 +297,23 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
     }
 
     private void createNotificationChannel() {
-        // Create the NotificationChannel, but only on API 26+ because
-        // the NotificationChannel class is new and not in the support library
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "Default Messages";
-            String description = "General Notifications";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("default", name, importance);
-            channel.setDescription(description);
-            channel.setSound(null, null);
-            // Register the channel with the system; you can't change the importance
-            // or other notification behaviors after this
-            NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
+        try {
+            // Create the NotificationChannel, but only on API 26+ because
+            // the NotificationChannel class is new and not in the support library
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                CharSequence name = "Whiteroads Notifications";
+                String description = "Persistent Notification for Data capturing";
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                NotificationChannel channel = new NotificationChannel(NetworkConstants.ChannelId, name, importance);
+                channel.setDescription(description);
+                channel.setSound(null, null);
+                // Register the channel with the system; you can't change the importance
+                // or other notification behaviors after this
+                NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.createNotificationChannel(channel);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

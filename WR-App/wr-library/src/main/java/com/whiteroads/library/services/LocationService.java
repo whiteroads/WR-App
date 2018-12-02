@@ -4,11 +4,15 @@ package com.whiteroads.library.services;
 import android.Manifest;
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -33,6 +37,7 @@ import com.whiteroads.library.BuildConfig;
 import com.whiteroads.library.LibraryApplication;
 import com.whiteroads.library.R;
 import com.whiteroads.library.constants.IntentConstants;
+import com.whiteroads.library.constants.NetworkConstants;
 import com.whiteroads.library.data.LocationDataWrapper;
 import com.whiteroads.library.data.UserDataWrapper;
 import com.whiteroads.library.model.CaptureModel;
@@ -87,24 +92,59 @@ public class LocationService extends Service implements SensorEventListener {
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
             super.onStartCommand(intent, flags, startId);
-            this.intent = intent;
-            if (!UserDataWrapper.getInstance().isServiceStopped()) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && builder == null) {
-                    builder = new Notification.Builder(LocationService.this, "default")
-                            .setContentTitle(getString(R.string.app_name))
-                            .setSound(null, null)
-                            .setContentText("Location is being captured!!")
-                            .setAutoCancel(true);
+            if(!UserDataWrapper.getInstance().isServiceStopped()) {
+                this.intent = intent;
+                if (!UserDataWrapper.getInstance().isServiceStopped()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && builder == null) {
+                        createNotificationChannel();
+                        builder = new Notification.Builder(LocationService.this, NetworkConstants.ChannelId)
+                                .setContentTitle(getString(R.string.app_name))
+                                .setSmallIcon(R.drawable.notif_icon)
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                        R.drawable.icon_white))
+                                .setSound(null, null)
+                                .setContentText("Capturing Location Data...")
+                                .setAutoCancel(true);
 
-                    Notification notification = builder.build();
-                    startForeground(2, notification);
+                        Notification notification = builder.build();
+                        startForeground(123456, notification);
+                    }
+                    new StartAsync().execute();
                 }
-                new StartAsync().execute();
+            }else{
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    stopForeground(true);
+                }else{
+                    stopService(intent);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return START_STICKY;
+    }
+
+    private void createNotificationChannel() {
+        try {
+            // Create the NotificationChannel, but only on API 26+ because
+            // the NotificationChannel class is new and not in the support library
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                CharSequence name = "Whiteroads Notifications";
+                String description = "Persistent Notification for Data capturing";
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                NotificationChannel channel = new NotificationChannel(NetworkConstants.ChannelId, name, importance);
+                channel.setDescription(description);
+                channel.setSound(null, null);
+                channel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+                channel.setLightColor(Color.BLUE);
+                // Register the channel with the system; you can't change the importance
+                // or other notification behaviors after this
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.createNotificationChannel(channel);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public void startCapturingSensorsData() {
         try {
@@ -483,7 +523,9 @@ public class LocationService extends Service implements SensorEventListener {
             LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
             ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
             ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_STEPS));
-            sensorManager.unregisterListener(this, steps);
+            if(sensorManager!=null) {
+                sensorManager.unregisterListener(this, steps);
+            }
             //restarting in case of failure
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
                 Intent sensors = new Intent(this, LocationService.class);

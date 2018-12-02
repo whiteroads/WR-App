@@ -30,20 +30,22 @@ public class HomeActivity extends AppCompatActivity{
     private PendingIntent pIntent;
     private AlarmManager alarm;
     private BottomNavigationView navigation;
+    public StartService startService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_home);
         try {
-            StartService startService = new StartService(this);
+            startService = new StartService(this);
             startService.initializeSDK(UserDataWrapper.getInstance().getUserMobile(),UserDataWrapper.getInstance().getVehicleNumber(),
                     UserDataWrapper.getInstance().getUserName(),UserDataWrapper.getInstance().getUserEmail());
-            if(Arrays.asList("rahulgoyal670@gmail.com","parasiitbbs@gmail.com","parulsharmma@gmail.com","nikhilsharma010@gmail.com").contains(UserDataWrapper.getInstance().getUserEmail())){
+//            if(Arrays.asList("rahulgoyal670@gmail.com","parasiitbbs@gmail.com","parulsharmma@gmail.com","nikhilsharma010@gmail.com").contains(UserDataWrapper.getInstance().getUserEmail())){
+//                HandleBottomNavigation();
+//            }else{
                 HandleBottomNavigation();
-            }else{
                 loadFragment(new AnalysisFragment());
-            }
+//            }
         } catch (Exception e) {
             e.printStackTrace();
         }

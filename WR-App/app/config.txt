@@ -45,35 +45,35 @@
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar(**.class)
--injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/intermediates/intermediate-jars/release/classes.jar(**.class)
--injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/classes/release(**.class)
--injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
--outjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/transforms/proguard/release/0.jar
+-injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/intermediates/intermediate-jars/release/classes.jar(**.class)
+-injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/classes/release(**.class)
+-injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
+-outjars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/transforms/proguard/release/0.jar
 
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar(**.class)
 -libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/android.jar
 -libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/optional/org.apache.http.legacy.jar
--libraryjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/libs
+-libraryjars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/libs
 
 -forceprocessing
--printusage /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/usage.txt
+-printusage /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/usage.txt
 -dontoptimize
 -optimizations !code/simplification/arithmetic,!method/inlining/*
 -optimizationpasses 5
 -allowaccessmodification
--printmapping /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/mapping.txt
+-printmapping /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/mapping.txt
 -dontusemixedcaseclassnames
 -repackageclasses ''
 -keepattributes *Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,*Annotation*,Signature,InnerClasses,EnclosingMethod,*Annotation*,*Annotation*,*Annotation*
 -verbose
 -dontnote com.android.vending.licensing.ILicensingService,com.google.vending.licensing.ILicensingService,com.google.android.vending.licensing.ILicensingService,android.support.**
 -dontwarn javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,com.gc.materialdesign.views.**,com.parse.**,com.facebook.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,okio.**,retrofit2.Platform$Java8,android.support.**,android.util.FloatMath,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**,android.arch.persistence.room.paging.**
--printconfiguration /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/config.txt
--dump /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/dump.txt
--printseeds /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/outputs/mapping/release/seeds.txt
+-printconfiguration /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/config.txt
+-dump /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/dump.txt
+-printseeds /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/seeds.txt
 
 
--keep public class com.analytics.** {
+-keep public class com.whiteroads.** {
     <fields>;
     <methods>;
 }
@@ -220,7 +220,7 @@
     <methods>;
 }
 
--keep public class com.analytics.library.** {
+-keep public class com.whiteroads.library.** {
     <fields>;
     <methods>;
 }
@@ -260,6 +260,71 @@
     public static final ** CREATOR;
 }
 
+-keep public class com.google.vending.licensing.ILicensingService
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keep public class com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface
+    <methods>;
+}
+
+# Understand the @Keep support annotation.
+-keep class android.support.annotation.Keep
+
+-keep @android.support.annotation.Keep class * {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <init>(...);
+}
+
 # Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/93a7e20f73d7634647f5e017c8d95087/res/layout/design_bottom_navigation_item.xml:26
 -keep class android.support.design.internal.BaselineLayout {
     <init>(...);
@@ -280,7 +345,7 @@
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/activity_home.xml:15
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/activity_home.xml:15
 -keep class android.support.design.widget.BottomNavigationView {
     <init>(...);
 }
@@ -302,8 +367,8 @@
 }
 
 # Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/b2a1a9ed4ee6c8ad71da45a1d1d77d56/res/layout/abc_alert_dialog_material.xml:41
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/fragment_analysis.xml:1
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/src/main/res/layout/fragment_sensors.xml:1
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/fragment_analysis.xml:1
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/fragment_sensors.xml:1
 -keep class android.support.v4.widget.NestedScrollView {
     <init>(...);
 }
@@ -426,72 +491,37 @@
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:24
--keep class com.analytics.drivinganalytics.DAApplication {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:36
--keep class com.analytics.drivinganalytics.HomeActivity {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:49
--keep class com.analytics.drivinganalytics.LoginActivity {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:111
--keep class com.analytics.library.receivers.SensorRestartBroadcastReceiver {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:129
--keep class com.analytics.library.services.DetectedActivitiesIntentService {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:121
--keep class com.analytics.library.services.LocationService {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:117
--keep class com.analytics.library.services.SensorService {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:155
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:155
 -keep class com.facebook.CurrentAccessTokenExpirationBroadcastReceiver {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:61
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:61
 -keep class com.facebook.CustomTabActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:132
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:132
 -keep class com.facebook.CustomTabMainActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:56
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:56
 -keep class com.facebook.FacebookActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:92
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:92
 -keep class com.facebook.accountkit.internal.AccountKitInitProvider {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:73
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:73
 -keep class com.facebook.accountkit.ui.AccountKitActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:79
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:79
 -keep class com.facebook.accountkit.ui.AccountKitEmailRedirectActivity {
     <init>(...);
 }
@@ -534,88 +564,58 @@
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:150
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:150
 -keep class com.facebook.internal.FacebookInitProvider {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:106
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:106
 -keep class com.google.android.gms.auth.api.signin.RevocationBoundService {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:97
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:97
 -keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/app/build/intermediates/manifests/full/release/AndroidManifest.xml:133
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:133
 -keep class com.google.android.gms.common.api.GoogleApiActivity {
     <init>(...);
 }
 
--keep public class com.google.vending.licensing.ILicensingService
-
--keep public class com.android.vending.licensing.ILicensingService
-
--keep public class com.google.android.vending.licensing.ILicensingService
-
-# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
--keepclasseswithmembers,allowshrinking class * {
-    native <methods>;
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:25
+-keep class com.whiteroads.application.DAApplication {
+    <init>(...);
 }
 
-# Keep setters in Views so that animations can still work.
--keepclassmembers public class * extends android.view.View {
-    void set*(***);
-    *** get*();
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:36
+-keep class com.whiteroads.application.HomeActivity {
+    <init>(...);
 }
 
-# We want to keep methods in Activity that could be used in the XML attribute onClick.
--keepclassmembers class * extends android.app.Activity {
-    public void *(android.view.View);
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:49
+-keep class com.whiteroads.application.LoginActivity {
+    <init>(...);
 }
 
-# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
--keepclassmembers enum  * {
-    public static **[] values();
-    public static ** valueOf(java.lang.String);
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:111
+-keep class com.whiteroads.library.receivers.SensorRestartBroadcastReceiver {
+    <init>(...);
 }
 
--keepclassmembers class * extends android.os.Parcelable {
-    public static final ** CREATOR;
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:129
+-keep class com.whiteroads.library.services.DetectedActivitiesIntentService {
+    <init>(...);
 }
 
--keepclassmembers class **.R$* {
-    public static <fields>;
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:121
+-keep class com.whiteroads.library.services.LocationService {
+    <init>(...);
 }
 
-# Preserve annotated Javascript interface methods.
--keepclassmembers class * {
-    @android.webkit.JavascriptInterface
-    <methods>;
-}
-
-# Understand the @Keep support annotation.
--keep class android.support.annotation.Keep
-
--keep @android.support.annotation.Keep class * {
-    <fields>;
-    <methods>;
-}
-
--keepclasseswithmembers class * {
-    @android.support.annotation.Keep
-    <methods>;
-}
-
--keepclasseswithmembers class * {
-    @android.support.annotation.Keep
-    <fields>;
-}
-
--keepclasseswithmembers class * {
-    @android.support.annotation.Keep
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/manifests/full/release/AndroidManifest.xml:117
+-keep class com.whiteroads.library.services.SensorService {
     <init>(...);
 }
 

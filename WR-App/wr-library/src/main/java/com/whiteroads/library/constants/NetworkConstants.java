@@ -21,4 +21,7 @@ public class NetworkConstants {
     //firebase constants
     public final static String UploadTimeInMins = "upload_time_in_mins";
     public final static String FrequencySeconds = "frequency_seconds";
+
+
+    public final static String ChannelId = "com.whiteroads.library";
 }

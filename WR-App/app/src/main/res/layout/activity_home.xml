@@ -19,7 +19,7 @@
         android:visibility="gone"
         android:layout_marginLeft="0dp"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/colorPrimary"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/selector_nav"
         app:itemTextColor="@color/selector_nav"

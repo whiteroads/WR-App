@@ -21,7 +21,7 @@ public abstract class SensorsDatabase extends RoomDatabase {
             synchronized (SensorsDatabase.class) {
                 if (INSTANCE == null) {
                     String databasname= "sensors_db";
-                    databasname= context.getFilesDir().getAbsolutePath()+File.separator+ "analyticsdb"+ File.separator+ databasname;
+                    databasname= context.getFilesDir().getAbsolutePath()+File.separator+ "whiteroads"+ File.separator+ databasname;
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             SensorsDatabase.class, databasname)
                             .allowMainThreadQueries()

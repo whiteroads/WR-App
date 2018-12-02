@@ -4,14 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".HomeActivity">
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:id="@+id/logo"
-        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
         android:src="@mipmap/logo"
-        android:layout_height="100dp" />
+        android:layout_height="200dp" />
 
     <Button
         android:layout_width="wrap_content"
