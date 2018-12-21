@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -13,6 +14,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.BatteryManager;
@@ -33,6 +36,7 @@ import com.whiteroads.library.interfaces.DataEventListener;
 import com.whiteroads.library.model.UserModel;
 import com.whiteroads.library.networks.NetworksCalls;
 import com.whiteroads.library.services.LocationService;
+import com.whiteroads.library.services.NotificationSingleton;
 import com.whiteroads.library.services.SensorService;
 import com.whiteroads.library.utils.CommonMethods;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -263,6 +267,9 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
 
     private void startAllServices() {
         try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                createNotificationChannel();
+            }
             UserDataWrapper.getInstance().setIsServicesStopped(false);
             if (ContextCompat.checkSelfPermission(context,
                     android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
@@ -282,7 +289,16 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                 context.startService(service);
             } else {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    createNotificationChannel();
+                    Notification.Builder builder = new Notification.Builder(context, NetworkConstants.ChannelId)
+                            .setContentTitle(context.getString(R.string.app_name))
+                            .setSmallIcon(R.drawable.notif_icon)
+                            .setOnlyAlertOnce(true)
+                            .setLargeIcon(BitmapFactory.decodeResource(context.getResources(),
+                                    R.drawable.icon_white))
+                            .setContentText("Extracting information from sensors...");
+
+                    Notification notification = builder.build();
+                    NotificationSingleton.getObject().setBuilder(notification);
                     sensors = new Intent(context, SensorService.class);
                     pIntent = PendingIntent.getForegroundService(context, 0, sensors, PendingIntent.FLAG_UPDATE_CURRENT);
                     alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -307,16 +323,17 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                 NotificationChannel channel = new NotificationChannel(NetworkConstants.ChannelId, name, importance);
                 channel.setDescription(description);
                 channel.setSound(null, null);
+                channel.setShowBadge(true);
+                channel.setLightColor(Color.BLUE);
                 // Register the channel with the system; you can't change the importance
                 // or other notification behaviors after this
                 NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.createNotificationChannel(channel);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
     public void displayLocationSettingsRequest(final Activity context) {
         GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context)
                 .addApi(LocationServices.API).build();

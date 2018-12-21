@@ -11,11 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-/**
- *  IntentService for handling incoming intents that are generated as a result of requesting
- *  activity updates using
- *  {@link com.google.android.gms.location.ActivityRecognitionApi#requestActivityUpdates}.
- */
 public class DetectedActivitiesIntentService extends IntentService {
 
     protected static final String TAG = "DetectedActivitiesIS";

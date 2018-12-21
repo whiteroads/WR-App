@@ -1,81 +1,172 @@
--injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/intermediates/classes/release(**.class)
--injars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
--outjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/intermediates/transforms/proguard/release/0.jar
+-injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes(**.class)
+-injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
+-outjars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/intermediates/transforms/proguard/release/0.jar
 
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0/49eb3ad545e7701234e4dd83db8dc1344b577f23/converter-gson-2.0.0.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/f872c65348c1bf8c92b6e091032257e1/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/c567924e5857333239633a91ce06a58b/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/9d97371450ce3a83bf82c8f7430c3f04/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0b5b90755e1d112396c420bee8f2b71d/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/329ab50044fe74d3e0cdc32f45c80665/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/ea78fba172c2d1d2b7d1b56043c0694d/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/7cd4a1008981d9ba1629a7618b5019e1/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6425ce382d5b608b9b89ee447c0a06f8/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/4e6ba0d70832b7a6ef385363f9795b01/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0278e3ac4b1c0578aa987e0524b309b8/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/a0ec32d2ab45bd07377e9f2352d5013c/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/5a1f8cb9675ff162ae08d15a11ddfeae/jars/classes.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ece9ae5d83ab1c9eeb9888963b6d7ddb/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/29c7c65fd6ede825b263bdabe747c934/jars/classes.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6f9a2703e29973e04d290696f12693d9/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/08a5d29a1a82827fbcb381f4e45fc6f4/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/a9b48ff5ede15357405a00920a0de483/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/9c185fabff8625740aa6a6af1b5a1311/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/69fb4ad3e8b94db693bf46d75aa7500c/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/7a1aab2e6a10ac32f3fbcbb9993cce8d/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/632ee8a4936580b5be319260fc976be0/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/63beab8f5c3604288cfbd089c8d6ef74/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/44e5c32adb55086dd6927fff8c2e18b2/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/38135e7625c21d8d4e5f5effea6f7b27/jars/classes.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/common/1.1.1/8094cc50760b9ac665a8ea76b51888f70042e2b5/common-1.1.1.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/58a0a0dc55da5eeaa511c7010866a04a/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/69e4c8e38f3b783087b7d8060bcbffd1/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dfd42dc90f5386357763d494952fcb60/jars/classes.jar(**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/cf1829ef867b6c9fe47874f80a41f5ca/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/67bfe2487858e4a84abff70108beee02/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/ae1ea60adcd57c74f4e1dc84bbea59bb/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4d762071ca76b958c3184852230ca4af/jars/classes.jar(**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/3b8e66320bdbd64e8a3ff2ea0c2bba58/jars/classes.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.2/b9ef4342c934a1a8b107506273dc8061662a322/support-annotations-27.0.2.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar(**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0/49eb3ad545e7701234e4dd83db8dc1344b577f23/converter-gson-2.0.0.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/f872c65348c1bf8c92b6e091032257e1/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/c567924e5857333239633a91ce06a58b/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/9d97371450ce3a83bf82c8f7430c3f04/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0b5b90755e1d112396c420bee8f2b71d/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/329ab50044fe74d3e0cdc32f45c80665/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/ea78fba172c2d1d2b7d1b56043c0694d/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/7cd4a1008981d9ba1629a7618b5019e1/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6425ce382d5b608b9b89ee447c0a06f8/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/4e6ba0d70832b7a6ef385363f9795b01/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0278e3ac4b1c0578aa987e0524b309b8/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/a0ec32d2ab45bd07377e9f2352d5013c/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/5a1f8cb9675ff162ae08d15a11ddfeae/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ece9ae5d83ab1c9eeb9888963b6d7ddb/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/29c7c65fd6ede825b263bdabe747c934/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/6f9a2703e29973e04d290696f12693d9/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/08a5d29a1a82827fbcb381f4e45fc6f4/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/a9b48ff5ede15357405a00920a0de483/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/9c185fabff8625740aa6a6af1b5a1311/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/69fb4ad3e8b94db693bf46d75aa7500c/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/7a1aab2e6a10ac32f3fbcbb9993cce8d/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/632ee8a4936580b5be319260fc976be0/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/63beab8f5c3604288cfbd089c8d6ef74/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/44e5c32adb55086dd6927fff8c2e18b2/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/38135e7625c21d8d4e5f5effea6f7b27/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/common/1.1.1/8094cc50760b9ac665a8ea76b51888f70042e2b5/common-1.1.1.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/58a0a0dc55da5eeaa511c7010866a04a/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/69e4c8e38f3b783087b7d8060bcbffd1/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/dfd42dc90f5386357763d494952fcb60/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
--libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/cf1829ef867b6c9fe47874f80a41f5ca/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/67bfe2487858e4a84abff70108beee02/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/ae1ea60adcd57c74f4e1dc84bbea59bb/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4d762071ca76b958c3184852230ca4af/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
+-libraryjars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/3b8e66320bdbd64e8a3ff2ea0c2bba58/jars/classes.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.2/b9ef4342c934a1a8b107506273dc8061662a322/support-annotations-27.0.2.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar(!META-INF/MANIFEST.MF,!**.class)
 -libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/android.jar
+-libraryjars /Users/rahulgoyal/Setup/Android/sdk/build-tools/28.0.3/core-lambda-stubs.jar
 -libraryjars /Users/rahulgoyal/Setup/Android/sdk/platforms/android-27/optional/org.apache.http.legacy.jar
--libraryjars /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/libs
+-libraryjars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/libs
 
 -forceprocessing
--printusage /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/outputs/mapping/release/usage.txt
+-printusage /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/outputs/mapping/release/usage.txt
+-dontoptimize
 -optimizations !code/simplification/arithmetic,!method/inlining/*
 -optimizationpasses 5
 -allowaccessmodification
--printmapping /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/outputs/mapping/release/mapping.txt
+-printmapping /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/outputs/mapping/release/mapping.txt
 -dontusemixedcaseclassnames
 -repackageclasses ''
--keepattributes *Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,Signature,Exceptions,*Annotation*,*Annotation*
--dontwarn android.support.v7.**,android.support.v4.app.**,okio.**,com.squareup.okhttp3.**,javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,android.arch.util.paging.CountedDataSource,android.arch.persistence.room.paging.LimitOffsetDataSource,com.google.android.gms.**,com.gc.materialdesign.views.**,com.parse.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,com.crashlytics.**,retrofit2.**,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**,android.arch.persistence.room.paging.**
--printconfiguration /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/config.txt
--dump /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/outputs/mapping/release/dump.txt
--printseeds /Users/rahulgoyal/Codes/da-app/DrivingAnalytics/danalytics/build/outputs/mapping/release/seeds.txt
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod,*Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,Signature,Exceptions,*Annotation*,*Annotation*
+-verbose
+-dontnote com.android.vending.licensing.ILicensingService,com.google.vending.licensing.ILicensingService,com.google.android.vending.licensing.ILicensingService,android.support.**,androidx.**,org.apache.http.**,android.net.http.**,java.lang.invoke.**
+-dontwarn android.support.**,androidx.**,android.util.FloatMath,android.support.v7.**,android.support.v4.app.**,okio.**,com.squareup.okhttp3.**,javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,android.arch.util.paging.CountedDataSource,android.arch.persistence.room.paging.LimitOffsetDataSource,com.google.android.gms.**,com.gc.materialdesign.views.**,com.parse.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,com.crashlytics.**,retrofit2.**,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**,android.arch.persistence.room.paging.**
+-printconfiguration /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/config.txt
+-printseeds /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/outputs/mapping/release/seeds.txt
+
 
 
 -keep class **.R
 
 -keep class **.R$*
+
+-keep public class com.google.vending.licensing.ILicensingService
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keep public class com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface
+    <methods>;
+}
+
+# Understand the @Keep support annotation.
+-keep class android.support.annotation.Keep
+
+-keep class androidx.annotation.Keep
+
+-keep @android.support.annotation.Keep class * {
+    <fields>;
+    <methods>;
+}
+
+-keep @androidx.annotation.Keep class * {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep
+    <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep
+    <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep
+    <init>(...);
+}
+
+-keepclasseswithmembers class * {
+    @androidx.annotation.Keep
+    <init>(...);
+}
 
 -keep class com.firebase.** {
     <fields>;
@@ -92,7 +183,7 @@
     <methods>;
 }
 
--keep public class com.analytics.** {
+-keep public class com.whiteroads.** {
     <fields>;
     <methods>;
 }
@@ -338,19 +429,19 @@
 }
 
 # Generated by the gradle plugin
--keep class com.analytics.library.receivers.SensorRestartBroadcastReceiver {
+-keep class com.whiteroads.library.receivers.SensorRestartBroadcastReceiver {
     <init>(...);
 }
 
--keep class com.analytics.library.services.DetectedActivitiesIntentService {
+-keep class com.whiteroads.library.services.DetectedActivitiesIntentService {
     <init>(...);
 }
 
--keep class com.analytics.library.services.LocationService {
+-keep class com.whiteroads.library.services.LocationService {
     <init>(...);
 }
 
--keep class com.analytics.library.services.SensorService {
+-keep class com.whiteroads.library.services.SensorService {
     <init>(...);
 }
 

@@ -44,13 +44,12 @@ import java.util.List;
 
 public class SensorService extends Service implements SensorEventListener {
     private SensorManager sensorManager;
-    private Sensor accel, gyroscope, linearAccel, rotation, temp, orientation, proximity,light;
+    private Sensor accel, gyroscope, linearAccel, rotation, temp, orientation, proximity, light;
     private CaptureModel captureModel;
     private boolean firstLoad = true;
     private List<Sensor> listening;
-    private Notification.Builder builder;
     private long timestamp;
-//    private FirebaseRemoteConfig firebaseRemoteConfig;
+    //    private FirebaseRemoteConfig firebaseRemoteConfig;
     private Intent intent;
 
     @Override
@@ -58,32 +57,21 @@ public class SensorService extends Service implements SensorEventListener {
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
             super.onStartCommand(intent, flags, startId);
-            if(!UserDataWrapper.getInstance().isServiceStopped()) {
+            if (!UserDataWrapper.getInstance().isServiceStopped()) {
                 this.intent = intent;
-                if (!UserDataWrapper.getInstance().isServiceStopped()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        createNotificationChannel();
-                        builder = new Notification.Builder(SensorService.this, NetworkConstants.ChannelId)
-                                .setContentTitle(getString(R.string.app_name))
-                                .setSmallIcon(R.drawable.notif_icon)
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
-                                        R.drawable.icon_white))
-                                .setContentText("Capturing Sensors Data...")
-                                .setAutoCancel(false);
-
-                        Notification notification = builder.build();
-                        startForeground(12345, notification);
-                    }
-                    new StartAsync().execute();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    //createNotificationChannel();
+                    startForeground(123457, NotificationSingleton.getObject().getBuilder());
                 }
-            }else{
+                new StartAsync().execute();
+            } else {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     stopForeground(true);
-                }else{
+                } else {
                     stopService(intent);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return START_STICKY;
@@ -100,14 +88,14 @@ public class SensorService extends Service implements SensorEventListener {
                 NotificationChannel channel = new NotificationChannel(NetworkConstants.ChannelId, name, importance);
                 channel.setDescription(description);
                 channel.setSound(null, null);
-                channel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+                channel.setShowBadge(false);
                 channel.setLightColor(Color.BLUE);
                 // Register the channel with the system; you can't change the importance
                 // or other notification behaviors after this
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.createNotificationChannel(channel);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -118,123 +106,123 @@ public class SensorService extends Service implements SensorEventListener {
         return null;
     }
 
-    public void unregisterAllListeners(){
-        try{
-            if(rotation!=null) {
+    public void unregisterAllListeners() {
+        try {
+            if (rotation != null) {
                 sensorManager.unregisterListener(this, rotation);
             }
-            if(accel!=null) {
+            if (accel != null) {
                 sensorManager.unregisterListener(this, accel);
             }
-            if(gyroscope!=null) {
+            if (gyroscope != null) {
                 sensorManager.unregisterListener(this, gyroscope);
             }
-            if(linearAccel!=null) {
+            if (linearAccel != null) {
                 sensorManager.unregisterListener(this, linearAccel);
             }
-            if(light!=null) {
+            if (light != null) {
                 sensorManager.unregisterListener(this, light);
             }
-            if(temp!=null) {
+            if (temp != null) {
                 sensorManager.unregisterListener(this, temp);
             }
-            if(orientation!=null) {
+            if (orientation != null) {
                 sensorManager.unregisterListener(this, orientation);
             }
-            if(proximity!=null) {
+            if (proximity != null) {
                 sensorManager.unregisterListener(this, proximity);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void startCaptruingSensorsData() {
         try {
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null) {
                 accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
-            }else{
+            } else {
                 captureModel.setAccelerometer_X("NA");
                 captureModel.setAccelerometer_Y("NA");
                 captureModel.setAccelerometer_Z("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null) {
                 gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE));
-            }else{
+            } else {
                 captureModel.setGyroscope_X("NA");
                 captureModel.setGyroscope_Y("NA");
                 captureModel.setGyroscope_Z("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION)!=null){
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION) != null) {
                 linearAccel = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION));
-            }else{
+            } else {
                 captureModel.setLinearAcceleration_X("NA");
                 captureModel.setLinearAcceleration_Y("NA");
                 captureModel.setLinearAcceleration_Z("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR) != null) {
                 rotation = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR));
-            }else{
+            } else {
                 captureModel.setRotationVector_X("NA");
                 captureModel.setRotationVector_Y("NA");
                 captureModel.setRotationVector_Z("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE) != null) {
                 temp = sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE));
-            }else{
+            } else {
                 captureModel.setTemperature("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION) != null) {
                 orientation = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION));
-            }else{
+            } else {
                 captureModel.setOrientation_X("NA");
                 captureModel.setOrientation_Y("NA");
                 captureModel.setOrientation_Z("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY) != null) {
                 proximity = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
-            }else{
+            } else {
                 captureModel.setProximity("NA");
             }
-            if(sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)!=null) {
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT) != null) {
                 light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
                 listening.add(sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT));
-            }else{
+            } else {
                 captureModel.setLight("NA");
             }
-            if(listening.size()==0){
+            if (listening.size() == 0) {
                 SensorsDataWrapper.getInstance().saveCacheData(new Gson().toJson(captureModel));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData());
             }
-            if(accel!=null){
+            if (accel != null) {
                 sensorManager.registerListener(this, accel, 0);
             }
-            if(gyroscope!=null){
+            if (gyroscope != null) {
                 sensorManager.registerListener(this, gyroscope, 0);
             }
-            if(linearAccel!=null){
+            if (linearAccel != null) {
                 sensorManager.registerListener(this, linearAccel, 0);
             }
-            if(rotation!=null){
+            if (rotation != null) {
                 sensorManager.registerListener(this, rotation, 0);
             }
-            if(temp!=null){
+            if (temp != null) {
                 sensorManager.registerListener(this, temp, 0);
             }
-            if(light!=null){
+            if (light != null) {
                 sensorManager.registerListener(this, light, 0);
             }
-            if(orientation!=null){
+            if (orientation != null) {
                 sensorManager.registerListener(this, orientation, 0);
             }
-            if(proximity!=null){
+            if (proximity != null) {
                 sensorManager.registerListener(this, proximity, 0);
             }
         } catch (Exception e) {
@@ -255,9 +243,9 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setAccelerometer_Z(String.valueOf(event.values[2]));
                 sensorManager.unregisterListener(this, accel);
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.accelX,String.valueOf(event.values[0]));
-                intent.putExtra(IntentConstants.accelY,String.valueOf(event.values[1]));
-                intent.putExtra(IntentConstants.accelZ,String.valueOf(event.values[2]));
+                intent.putExtra(IntentConstants.accelX, String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.accelY, String.valueOf(event.values[1]));
+                intent.putExtra(IntentConstants.accelZ, String.valueOf(event.values[2]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
             }
@@ -267,9 +255,9 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setGyroscope_Y(String.valueOf(event.values[1]));
                 captureModel.setGyroscope_Z(String.valueOf(event.values[2]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.GyroX,String.valueOf(event.values[0]));
-                intent.putExtra(IntentConstants.GyroY,String.valueOf(event.values[1]));
-                intent.putExtra(IntentConstants.GyroZ,String.valueOf(event.values[2]));
+                intent.putExtra(IntentConstants.GyroX, String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.GyroY, String.valueOf(event.values[1]));
+                intent.putExtra(IntentConstants.GyroZ, String.valueOf(event.values[2]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, gyroscope);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE));
@@ -280,9 +268,9 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setLinearAcceleration_Y(String.valueOf(event.values[1]));
                 captureModel.setLinearAcceleration_Z(String.valueOf(event.values[2]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.LinaccelX,String.valueOf(event.values[0]));
-                intent.putExtra(IntentConstants.LinaccelY,String.valueOf(event.values[1]));
-                intent.putExtra(IntentConstants.LinaccelZ,String.valueOf(event.values[2]));
+                intent.putExtra(IntentConstants.LinaccelX, String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.LinaccelY, String.valueOf(event.values[1]));
+                intent.putExtra(IntentConstants.LinaccelZ, String.valueOf(event.values[2]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, linearAccel);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION));
@@ -292,9 +280,9 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setRotationVector_Y(String.valueOf(event.values[1]));
                 captureModel.setRotationVector_Z(String.valueOf(event.values[2]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.rotationX,String.valueOf(event.values[0]));
-                intent.putExtra(IntentConstants.rotationY,String.valueOf(event.values[1]));
-                intent.putExtra(IntentConstants.rotationZ,String.valueOf(event.values[2]));
+                intent.putExtra(IntentConstants.rotationX, String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.rotationY, String.valueOf(event.values[1]));
+                intent.putExtra(IntentConstants.rotationZ, String.valueOf(event.values[2]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, rotation);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR));
@@ -303,7 +291,7 @@ public class SensorService extends Service implements SensorEventListener {
             if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
                 captureModel.setLight(String.valueOf(event.values[0]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.light,String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.light, String.valueOf(event.values[0]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, light);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT));
@@ -320,9 +308,9 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setOrientation_Y(String.valueOf(event.values[1]));
                 captureModel.setOrientation_Z(String.valueOf(event.values[2]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.OrientX,String.valueOf(event.values[0]));
-                intent.putExtra(IntentConstants.OrientY,String.valueOf(event.values[1]));
-                intent.putExtra(IntentConstants.OrientZ,String.valueOf(event.values[2]));
+                intent.putExtra(IntentConstants.OrientX, String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.OrientY, String.valueOf(event.values[1]));
+                intent.putExtra(IntentConstants.OrientZ, String.valueOf(event.values[2]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, orientation);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION));
@@ -331,13 +319,13 @@ public class SensorService extends Service implements SensorEventListener {
             if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
                 captureModel.setProximity(String.valueOf(event.values[0]));
                 Intent intent = new Intent("CapturedDataAccel");
-                intent.putExtra(IntentConstants.prox,String.valueOf(event.values[0]));
+                intent.putExtra(IntentConstants.prox, String.valueOf(event.values[0]));
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
                 sensorManager.unregisterListener(this, proximity);
                 listening.remove(sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
             }
 
-            if(listening.size()==0){
+            if (listening.size() == 0) {
                 SensorsDataWrapper.getInstance().saveCacheData(new Gson().toJson(captureModel));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData());
             }
@@ -369,9 +357,9 @@ public class SensorService extends Service implements SensorEventListener {
         public void run() {
             super.run();
             try {
-                if(CommonMethods.IsConnected(getApplicationContext())) {
+                if (CommonMethods.IsConnected(getApplicationContext())) {
                     List<CommonDBTable> items = SensorsDatabase.getDatabase(LibraryApplication.getCustomAppContext()).commonDAO().getAllItems();
-                    if(items!=null && items.size()>0) {
+                    if (items != null && items.size() > 0) {
                         for (CommonDBTable commonDBTable : items) {
                             new NetworksCalls(getApplicationContext()).storeCapturedData(commonDBTable.getValue());
                         }
@@ -379,7 +367,7 @@ public class SensorService extends Service implements SensorEventListener {
                 }
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     stopForeground(true);
-                }else{
+                } else {
                     stopService(intent);
                 }
             } catch (Exception e) {
@@ -412,7 +400,7 @@ public class SensorService extends Service implements SensorEventListener {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        try{
+        try {
             unregisterAllListeners();
             if (!UserDataWrapper.getInstance().isServiceStopped()) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -429,12 +417,12 @@ public class SensorService extends Service implements SensorEventListener {
                     alarm.set(AlarmManager.RTC_WAKEUP, interval, pIntent);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public class StartAsync extends AsyncTask<Void,Void,Void>{
+    public class StartAsync extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -462,7 +450,7 @@ public class SensorService extends Service implements SensorEventListener {
                 }
                 unregisterAllListeners();
                 startCaptruingSensorsData();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

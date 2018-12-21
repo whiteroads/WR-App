@@ -96,18 +96,8 @@ public class LocationService extends Service implements SensorEventListener {
                 this.intent = intent;
                 if (!UserDataWrapper.getInstance().isServiceStopped()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && builder == null) {
-                        createNotificationChannel();
-                        builder = new Notification.Builder(LocationService.this, NetworkConstants.ChannelId)
-                                .setContentTitle(getString(R.string.app_name))
-                                .setSmallIcon(R.drawable.notif_icon)
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
-                                        R.drawable.icon_white))
-                                .setSound(null, null)
-                                .setContentText("Capturing Location Data...")
-                                .setAutoCancel(true);
-
-                        Notification notification = builder.build();
-                        startForeground(123456, notification);
+                        //createNotificationChannel();
+                        startForeground(123457, NotificationSingleton.getObject().getBuilder());
                     }
                     new StartAsync().execute();
                 }
