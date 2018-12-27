@@ -13,8 +13,8 @@ android {
         applicationId "com.whiteroads.application"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0_beta"
+        versionCode 2
+        versionName "1.1_beta"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
     }
@@ -42,12 +42,20 @@ android {
     }
     productFlavors {
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.facebook.android:facebook-loginkit:4.36.0'
+    implementation 'com.android.support:design:27.1.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:6.8.1'
+    implementation 'android.arch.core:runtime:1.1.1'
     implementation project(':wr-library')
 }
 

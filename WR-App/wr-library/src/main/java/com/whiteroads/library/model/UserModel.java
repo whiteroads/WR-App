@@ -20,6 +20,24 @@ public class UserModel {
     private String battery_cap;
     private int vehicle_pk;
     private String mobile;
+    private String merchantKey;
+    private String merchantName;
+
+    public String getMerchantKey() {
+        return merchantKey;
+    }
+
+    public void setMerchantKey(String merchantKey) {
+        this.merchantKey = merchantKey;
+    }
+
+    public String getMerchantName() {
+        return merchantName;
+    }
+
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName;
+    }
 
     public String getMobile() {
         return mobile;

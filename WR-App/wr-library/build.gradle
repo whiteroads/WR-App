@@ -90,6 +90,10 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -98,11 +102,11 @@ dependencies {
     implementation 'com.android.support:support-v4:27.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-//    implementation 'com.google.firebase:firebase-config:16.1.0'
-//    implementation 'com.google.firebase:firebase-core:16.0.4'
+    //    implementation 'com.google.firebase:firebase-config:16.1.0'
+    //    implementation 'com.google.firebase:firebase-core:16.0.4'
     implementation 'de.greenrobot:eventbus:2.4.0'
-//    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
-//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    //    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+    //    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 }

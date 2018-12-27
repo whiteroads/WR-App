@@ -38,8 +38,9 @@ public class HomeActivity extends AppCompatActivity{
         setContentView(R.layout.activity_home);
         try {
             startService = new StartService(this);
-            startService.initializeSDK(UserDataWrapper.getInstance().getUserMobile(),UserDataWrapper.getInstance().getVehicleNumber(),
-                    UserDataWrapper.getInstance().getUserName(),UserDataWrapper.getInstance().getUserEmail());
+            startService.initializeSDK("whiteroads","6ca383af9aa7d7c6538e746927ddc829",
+                    UserDataWrapper.getInstance().getUserEmail(),
+                    UserDataWrapper.getInstance().getVehicleNumber());
 //            if(Arrays.asList("rahulgoyal670@gmail.com","parasiitbbs@gmail.com","parulsharmma@gmail.com","nikhilsharma010@gmail.com").contains(UserDataWrapper.getInstance().getUserEmail())){
 //                HandleBottomNavigation();
 //            }else{

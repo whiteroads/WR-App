@@ -75,12 +75,12 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
         this.context = context;
     }
 
-    public void initializeSDK(String mobile, String vehicleNumber, String name, String email) {
-        data[0] = email;
-        data[1] = name;
+    public void initializeSDK(String merchantName, String merchantKey, String userId, String vehicleId) {
+        data[0] = userId;
+        data[1] = merchantName;
         data[2] = "Gender";
-        data[3] = vehicleNumber;
-        data[4] = mobile;
+        data[3] = vehicleId;
+        data[4] = merchantKey;
         if (ContextCompat.checkSelfPermission(context,
                 android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(context,
@@ -425,9 +425,10 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                 UserModel userModel = new UserModel();
                 userModel.setEmail(data[0]);
                 userModel.setUser_name(data[1]);
+                userModel.setMerchantName(data[1]);
                 userModel.setGender(data[2]);
                 userModel.setVehicle_no(data[3]);
-                userModel.setMobile(data[4]);
+                userModel.setMerchantKey(data[4]);
                 try {
                     List<Sensor> sensors = ((SensorManager) context.getSystemService(SENSOR_SERVICE)).getSensorList(Sensor.TYPE_ALL);
                     userModel.setSensor_list(new Gson().toJson(sensors));
@@ -481,7 +482,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                 if (eventBusContext.getResultCode() == NetworkConstants.ResultCodeSuccess) {
                     startAllServices();
                 } else {
-                    CommonMethods.ShowToast(context, "Something went wrong! Please try again");
+                    CommonMethods.ShowToast(context, "Invalid Hash!! Please contact support admin@whiteroads.ai");
                 }
             }
         } catch (Exception e) {

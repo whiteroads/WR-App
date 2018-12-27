@@ -112,6 +112,8 @@ public class NetworksCalls {
                         UserDataWrapper.getInstance().saveUserEmail(commonResponse.getUserEmail());
                         UserDataWrapper.getInstance().saveUserId(commonResponse.getUserId());
                         UserDataWrapper.getInstance().saveVehicleNumber(commonResponse.getVehicleNumber());
+                        UserDataWrapper.getInstance().saveFrequency(commonResponse.getFrequency());
+                        UserDataWrapper.getInstance().saveUploadTimeInMins(commonResponse.getUploadTimeLocation());
                     }
                     eventBus.post(new EventBusContext(StartService.UPLOAD_DATA,commonResponse.getResultCode()));
                 }
