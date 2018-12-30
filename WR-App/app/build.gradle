@@ -20,9 +20,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            shrinkResources false
-            zipAlignEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard.cfg'
             debuggable true
@@ -57,7 +57,7 @@ dependencies {
     }
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'android.arch.core:runtime:1.1.1'
-    implementation 'com.github.whiteroads:WR-App:ef63377856'
+    implementation 'com.github.whiteroads:WR-App:1.0.1'
 //        implementation project(':wr-library')
 //    api(name: 'wr-library-debug', ext: 'aar'){
 //        transitive=true
