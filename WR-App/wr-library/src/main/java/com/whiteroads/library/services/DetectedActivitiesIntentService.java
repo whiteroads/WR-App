@@ -47,8 +47,8 @@ public class DetectedActivitiesIntentService extends IntentService {
             Log.v("TAG", detectedActivities.get(0).getType() + " " + detectedActivities.get(0).getConfidence());
             Collections.sort(detectedActivities, new CustomComparator());
             if (detectedActivities!=null && detectedActivities.size()>0){
-                UserDataWrapper.getInstance().setLastDetectedActivity(detectedActivities.get(0).getType());
-                UserDataWrapper.getInstance().setLastDetectedActivityConfidence(detectedActivities.get(0).getConfidence());
+                UserDataWrapper.getInstance(getApplicationContext()).setLastDetectedActivity(detectedActivities.get(0).getType());
+                UserDataWrapper.getInstance(getApplicationContext()).setLastDetectedActivityConfidence(detectedActivities.get(0).getConfidence());
             }
         }catch (Exception e){
             e.printStackTrace();

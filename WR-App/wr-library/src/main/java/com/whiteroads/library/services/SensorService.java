@@ -1,14 +1,12 @@
 package com.whiteroads.library.services;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -21,9 +19,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.whiteroads.library.BuildConfig;
-import com.whiteroads.library.LibraryApplication;
-import com.whiteroads.library.R;
 import com.whiteroads.library.constants.IntentConstants;
 import com.whiteroads.library.constants.NetworkConstants;
 import com.whiteroads.library.data.SensorsDataWrapper;
@@ -57,7 +52,7 @@ public class SensorService extends Service implements SensorEventListener {
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
             super.onStartCommand(intent, flags, startId);
-            if (!UserDataWrapper.getInstance().isServiceStopped()) {
+            if (!UserDataWrapper.getInstance(getApplicationContext()).isServiceStopped()) {
                 this.intent = intent;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     //createNotificationChannel();
@@ -198,7 +193,7 @@ public class SensorService extends Service implements SensorEventListener {
                 captureModel.setLight("NA");
             }
             if (listening.size() == 0) {
-                SensorsDataWrapper.getInstance().saveCacheData(new Gson().toJson(captureModel));
+                SensorsDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(captureModel));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData());
             }
             if (accel != null) {
@@ -326,7 +321,7 @@ public class SensorService extends Service implements SensorEventListener {
             }
 
             if (listening.size() == 0) {
-                SensorsDataWrapper.getInstance().saveCacheData(new Gson().toJson(captureModel));
+                SensorsDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(captureModel));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData());
             }
         } catch (Exception e) {
@@ -337,10 +332,10 @@ public class SensorService extends Service implements SensorEventListener {
     public void captureCommonInfo() {
         try {
             captureModel.setPing_time(String.valueOf(timestamp));
-            captureModel.setUser_fk(UserDataWrapper.getInstance().getUserId());
-            captureModel.setUser_email(UserDataWrapper.getInstance().getUserEmail());
+            captureModel.setUser_fk(UserDataWrapper.getInstance(getApplicationContext()).getUserId());
+            captureModel.setUser_email(UserDataWrapper.getInstance(getApplicationContext()).getUserEmail());
             captureModel.setServer_time(String.valueOf(timestamp));
-            captureModel.setVehicle_no(UserDataWrapper.getInstance().getVehicleNumber());
+            captureModel.setVehicle_no(UserDataWrapper.getInstance(getApplicationContext()).getVehicleNumber());
             captureModel.setDevice_OO(String.valueOf(CommonMethods.IsConnected(getApplicationContext())));
         } catch (Exception e) {
             e.printStackTrace();
@@ -358,7 +353,7 @@ public class SensorService extends Service implements SensorEventListener {
             super.run();
             try {
                 if (CommonMethods.IsConnected(getApplicationContext())) {
-                    List<CommonDBTable> items = SensorsDatabase.getDatabase(LibraryApplication.getCustomAppContext()).commonDAO().getAllItems();
+                    List<CommonDBTable> items = SensorsDatabase.getDatabase(getApplicationContext()).commonDAO().getAllItems();
                     if (items != null && items.size() > 0) {
                         for (CommonDBTable commonDBTable : items) {
                             new NetworksCalls(getApplicationContext()).storeCapturedData(commonDBTable.getValue());
@@ -388,8 +383,8 @@ public class SensorService extends Service implements SensorEventListener {
 //                    if (task.isSuccessful()) {
 //                        firebaseRemoteConfig.activateFetched();
 //                    }
-//                    UserDataWrapper.getInstance().saveUploadTimeInMins((int)firebaseRemoteConfig.getLong(NetworkConstants.UploadTimeInMins));
-//                    UserDataWrapper.getInstance().saveFrequency((int)firebaseRemoteConfig.getLong(NetworkConstants.FrequencySeconds));
+//                    UserDataWrapper.getInstance(getApplicationContext())().saveUploadTimeInMins((int)firebaseRemoteConfig.getLong(NetworkConstants.UploadTimeInMins));
+//                    UserDataWrapper.getInstance(getApplicationContext())().saveFrequency((int)firebaseRemoteConfig.getLong(NetworkConstants.FrequencySeconds));
 //                }
 //            });
 //        } catch (Exception e) {
@@ -402,18 +397,18 @@ public class SensorService extends Service implements SensorEventListener {
         super.onDestroy();
         try {
             unregisterAllListeners();
-            if (!UserDataWrapper.getInstance().isServiceStopped()) {
+            if (!UserDataWrapper.getInstance(getApplicationContext()).isServiceStopped()) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     Intent _Intent = new Intent(getApplicationContext(), SensorService.class);
                     final PendingIntent pIntent = PendingIntent.getForegroundService(SensorService.this, 0, _Intent, PendingIntent.FLAG_ONE_SHOT);
                     AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                    long interval = UserDataWrapper.getInstance().getFrequency() * 1000 + timestamp;
+                    long interval = UserDataWrapper.getInstance(getApplicationContext()).getFrequency() * 1000 + timestamp;
                     alarm.setExact(AlarmManager.RTC_WAKEUP, interval, pIntent);
                 } else {
                     Intent _Intent = new Intent(getApplicationContext(), SensorService.class);
                     final PendingIntent pIntent = PendingIntent.getService(getApplicationContext(), 0, _Intent, PendingIntent.FLAG_ONE_SHOT);
                     AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                    long interval = UserDataWrapper.getInstance().getFrequency() * 1000 + timestamp;
+                    long interval = UserDataWrapper.getInstance(getApplicationContext()).getFrequency() * 1000 + timestamp;
                     alarm.set(AlarmManager.RTC_WAKEUP, interval, pIntent);
                 }
             }
@@ -433,18 +428,18 @@ public class SensorService extends Service implements SensorEventListener {
                 timestamp = Calendar.getInstance().getTimeInMillis();
                 sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
                 firstLoad = true;
-                if (!UserDataWrapper.getInstance().isServiceStopped()) {
+                if (!UserDataWrapper.getInstance(getApplicationContext()).isServiceStopped()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         Intent _Intent = new Intent(getApplicationContext(), SensorService.class);
                         final PendingIntent pIntent = PendingIntent.getForegroundService(SensorService.this, 0, _Intent, PendingIntent.FLAG_ONE_SHOT);
                         AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                        long interval = UserDataWrapper.getInstance().getFrequency() * 1000 + timestamp;
+                        long interval = UserDataWrapper.getInstance(getApplicationContext()).getFrequency() * 1000 + timestamp;
                         alarm.setExact(AlarmManager.RTC_WAKEUP, interval, pIntent);
                     } else {
                         Intent _Intent = new Intent(getApplicationContext(), SensorService.class);
                         final PendingIntent pIntent = PendingIntent.getService(getApplicationContext(), 0, _Intent, PendingIntent.FLAG_ONE_SHOT);
                         AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                        long interval = UserDataWrapper.getInstance().getFrequency() * 1000 + timestamp;
+                        long interval = UserDataWrapper.getInstance(getApplicationContext()).getFrequency() * 1000 + timestamp;
                         alarm.set(AlarmManager.RTC_WAKEUP, interval, pIntent);
                     }
                 }
@@ -458,7 +453,7 @@ public class SensorService extends Service implements SensorEventListener {
         @Override
         protected Void doInBackground(Void... voids) {
 //            try {
-//                firebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+//                firebaseRemoteConfig = FirebaseRemoteConfig.getInstance(getApplicationContext())();
 //                FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder().setDeveloperModeEnabled(BuildConfig.DEBUG).build();
 //                firebaseRemoteConfig.setConfigSettings(configSettings);
 //                firebaseRemoteConfig.setDefaults(R.xml.remote_config_defaults);

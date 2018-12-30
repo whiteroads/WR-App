@@ -11,7 +11,6 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -33,9 +32,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import com.whiteroads.library.BuildConfig;
-import com.whiteroads.library.LibraryApplication;
-import com.whiteroads.library.R;
+
 import com.whiteroads.library.constants.IntentConstants;
 import com.whiteroads.library.constants.NetworkConstants;
 import com.whiteroads.library.data.LocationDataWrapper;
@@ -66,6 +63,9 @@ import java.util.Locale;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
+/**
+ *
+ */
 public class LocationService extends Service implements SensorEventListener {
 
     boolean checkGPS = false;
@@ -88,13 +88,20 @@ public class LocationService extends Service implements SensorEventListener {
     private ActivityRecognitionClient mActivityRecognitionClient;
     private Intent intent;
 
+    /**
+     *
+     * @param intent
+     * @param flags
+     * @param startId
+     * @return
+     */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
             super.onStartCommand(intent, flags, startId);
-            if(!UserDataWrapper.getInstance().isServiceStopped()) {
+            if(!UserDataWrapper.getInstance(getApplicationContext()).isServiceStopped()) {
                 this.intent = intent;
-                if (!UserDataWrapper.getInstance().isServiceStopped()) {
+                if (!UserDataWrapper.getInstance(getApplicationContext()).isServiceStopped()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && builder == null) {
                         //createNotificationChannel();
                         startForeground(123457, NotificationSingleton.getObject().getBuilder());
@@ -114,6 +121,9 @@ public class LocationService extends Service implements SensorEventListener {
         return START_STICKY;
     }
 
+    /**
+     *
+     */
     private void createNotificationChannel() {
         try {
             // Create the NotificationChannel, but only on API 26+ because
@@ -136,16 +146,21 @@ public class LocationService extends Service implements SensorEventListener {
             e.printStackTrace();
         }
     }
+
+    /**
+     *
+     */
     public void startCapturingSensorsData() {
         try {
             captureModelSteps = new CaptureModel();
             listSteps = new ArrayList<>();
             locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
             timestampSteps = Calendar.getInstance().getTimeInMillis();
-            captureModelSteps.setUser_fk(UserDataWrapper.getInstance().getUserId());
-            captureModelSteps.setUser_email(UserDataWrapper.getInstance().getUserEmail());
-            captureModelSteps.setVehicle_no(UserDataWrapper.getInstance().getVehicleNumber());
-            if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
+            captureModelSteps.setUser_fk(UserDataWrapper.getInstance(getApplicationContext()).getUserId());
+            captureModelSteps.setUser_email(UserDataWrapper.getInstance(getApplicationContext()).getUserEmail());
+            captureModelSteps.setVehicle_no(UserDataWrapper.getInstance(getApplicationContext()).getVehicleNumber());
+            if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null
+                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 steps = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
             } else {
                 captureModelSteps.setPedometer("NA");
@@ -156,7 +171,7 @@ public class LocationService extends Service implements SensorEventListener {
                 captureModelSteps.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModelSteps.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 listSteps.add(captureModelSteps);
-                if (Calendar.getInstance().getTimeInMillis() - timestampSteps > (UserDataWrapper.getInstance().getUploadTime() * 1000)) {
+                if (Calendar.getInstance().getTimeInMillis() - timestampSteps > (UserDataWrapper.getInstance(getApplicationContext()).getUploadTime() * 1000)) {
                     ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_STEPS));
                     timestampSteps = Calendar.getInstance().getTimeInMillis();
                 }
@@ -166,6 +181,10 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     * @param event
+     */
     @Override
     public synchronized void onSensorChanged(SensorEvent event) {
         try {
@@ -174,7 +193,7 @@ public class LocationService extends Service implements SensorEventListener {
                 captureModelSteps.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModelSteps.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 listSteps.add(captureModelSteps);
-                if (Calendar.getInstance().getTimeInMillis() - timestampSteps > (UserDataWrapper.getInstance().getUploadTime() * 1000)) {
+                if (Calendar.getInstance().getTimeInMillis() - timestampSteps > (UserDataWrapper.getInstance(getApplicationContext()).getUploadTime() * 1000)) {
                     ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_STEPS));
                     timestampSteps = Calendar.getInstance().getTimeInMillis();
                 }
@@ -188,11 +207,19 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     * @param sensor
+     * @param accuracy
+     */
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
 
+    /**
+     *
+     */
     private void getLocation() {
         try {
 
@@ -221,9 +248,9 @@ public class LocationService extends Service implements SensorEventListener {
             list = new ArrayList<>();
             locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
             timestamp = Calendar.getInstance().getTimeInMillis();
-            captureModel.setUser_fk(UserDataWrapper.getInstance().getUserId());
-            captureModel.setUser_email(UserDataWrapper.getInstance().getUserEmail());
-            captureModel.setVehicle_no(UserDataWrapper.getInstance().getVehicleNumber());
+            captureModel.setUser_fk(UserDataWrapper.getInstance(getApplicationContext()).getUserId());
+            captureModel.setUser_email(UserDataWrapper.getInstance(getApplicationContext()).getUserEmail());
+            captureModel.setVehicle_no(UserDataWrapper.getInstance(getApplicationContext()).getVehicleNumber());
 
             // get GPS status
             checkGPS = locationManager
@@ -241,10 +268,10 @@ public class LocationService extends Service implements SensorEventListener {
                 captureModel.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModel.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModel.setCallSatate(callState);
-                captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance().getLastUploadTimeRandomScore()));
-                captureModel.setScore(String.valueOf(UserDataWrapper.getInstance().getRandomScore()));
+                captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getLastUploadTimeRandomScore()));
+                captureModel.setScore(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getRandomScore()));
                 list.add(captureModel);
-                LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+                LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
                 list = new ArrayList<>();
                 timestamp = Calendar.getInstance().getTimeInMillis();
@@ -267,11 +294,19 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     * @param intent
+     * @return
+     */
     @Override
     public IBinder onBind(Intent intent) {
         return null;
     }
 
+    /**
+     *
+     */
     public class UploadCaptureData extends Thread {
 
         private int requestType;
@@ -300,15 +335,15 @@ public class LocationService extends Service implements SensorEventListener {
                             captureModel.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                             captureModel.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                             captureModel.setCallSatate(callState);
-                            captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance().getLastUploadTimeRandomScore()));
-                            captureModel.setScore(String.valueOf(UserDataWrapper.getInstance().getRandomScore()));
-                            captureModel.setActivityType(UserDataWrapper.getInstance().getLastActivityRecorded());
-                            captureModel.setActivityConfidence(UserDataWrapper.getInstance().getLastActivityRecordedConfidence());
+                            captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getLastUploadTimeRandomScore()));
+                            captureModel.setScore(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getRandomScore()));
+                            captureModel.setActivityType(UserDataWrapper.getInstance(getApplicationContext()).getLastActivityRecorded());
+                            captureModel.setActivityConfidence(UserDataWrapper.getInstance(getApplicationContext()).getLastActivityRecordedConfidence());
                             list.add(captureModel);
 
                             //Batching list of size 10 because to handle out of memory errors
                             if (list.size() > 10) {
-                                LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+                                LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                                 list.clear();
                             }
 
@@ -323,12 +358,12 @@ public class LocationService extends Service implements SensorEventListener {
                             LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intentSpeed);
                         }
                         if (list.size() > 0) {
-                            LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+                            LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                             list.clear();
                         }
-                        if (Calendar.getInstance().getTimeInMillis() - timestamp > (UserDataWrapper.getInstance().getUploadTime() * 1000)) {
+                        if (Calendar.getInstance().getTimeInMillis() - timestamp > (UserDataWrapper.getInstance(getApplicationContext()).getUploadTime() * 1000)) {
                             timestamp = Calendar.getInstance().getTimeInMillis();
-                            List<CommonDBTable> items = LocationDatabase.getDatabase(LibraryApplication.getCustomAppContext()).commonDAO().getAllItems();
+                            List<CommonDBTable> items = LocationDatabase.getDatabase(getApplicationContext()).commonDAO().getAllItems();
                             if (items != null && items.size() > 0) {
                                 for (CommonDBTable commonDBTable : items) {
                                     new NetworksCalls(getApplicationContext()).storeCapturedDataLocations(commonDBTable.getValue());
@@ -337,7 +372,7 @@ public class LocationService extends Service implements SensorEventListener {
                         }
                     }
                     if (requestType == UPLOAD_LOCATION) {
-                        List<CommonDBTable> items = LocationDatabase.getDatabase(LibraryApplication.getCustomAppContext()).commonDAO().getAllItems();
+                        List<CommonDBTable> items = LocationDatabase.getDatabase(getApplicationContext()).commonDAO().getAllItems();
                         if (items != null && items.size() > 0) {
                             for (CommonDBTable commonDBTable : items) {
                                 new NetworksCalls(getApplicationContext()).storeCapturedDataLocations(commonDBTable.getValue());
@@ -355,15 +390,18 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     */
     protected void startLocationUpdates() {
 
         try {
             mLocationRequest = new LocationRequest();
             mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-            long interval = UserDataWrapper.getInstance().getFrequency() * 1000;
+            long interval = UserDataWrapper.getInstance(getApplicationContext()).getFrequency() * 1000;
             mLocationRequest.setInterval(interval);
             mLocationRequest.setFastestInterval(1000);
-            mLocationRequest.setMaxWaitTime(UserDataWrapper.getInstance().getFrequency() + 10000);
+            mLocationRequest.setMaxWaitTime(UserDataWrapper.getInstance(getApplicationContext()).getFrequency() + 10000);
 
             LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder();
             builder.addLocationRequest(mLocationRequest);
@@ -380,10 +418,10 @@ public class LocationService extends Service implements SensorEventListener {
                 captureModel.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModel.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModel.setCallSatate(callState);
-                captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance().getLastUploadTimeRandomScore()));
-                captureModel.setScore(String.valueOf(UserDataWrapper.getInstance().getRandomScore()));
+                captureModel.setScorePingTime(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getLastUploadTimeRandomScore()));
+                captureModel.setScore(String.valueOf(UserDataWrapper.getInstance(getApplicationContext()).getRandomScore()));
                 list.add(captureModel);
-                LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+                LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
                 list = new ArrayList<>();
                 timestamp = Calendar.getInstance().getTimeInMillis();
@@ -412,17 +450,23 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     */
     public void increaseScore() {
         try {
-            if ((int) ((Calendar.getInstance().getTimeInMillis() - UserDataWrapper.getInstance().getLastUploadTimeRandomScore()) / (1000 * 60 * 60)) > 4) {
-                UserDataWrapper.getInstance().saveRandomScore(Math.min(UserDataWrapper.getInstance().getRandomScore() + (float) 1.8, 100));
-                UserDataWrapper.getInstance().saveLastUploadTimeRandomScore(Calendar.getInstance().getTimeInMillis());
+            if ((int) ((Calendar.getInstance().getTimeInMillis() - UserDataWrapper.getInstance(getApplicationContext()).getLastUploadTimeRandomScore()) / (1000 * 60 * 60)) > 4) {
+                UserDataWrapper.getInstance(getApplicationContext()).saveRandomScore(Math.min(UserDataWrapper.getInstance(getApplicationContext()).getRandomScore() + (float) 1.8, 100));
+                UserDataWrapper.getInstance(getApplicationContext()).saveLastUploadTimeRandomScore(Calendar.getInstance().getTimeInMillis());
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     *
+     */
     public void getLastLocation() {
         try {
             FusedLocationProviderClient locationClient = getFusedLocationProviderClient(this);
@@ -434,7 +478,7 @@ public class LocationService extends Service implements SensorEventListener {
                 captureModel.setPing_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 captureModel.setServer_time(String.valueOf(Calendar.getInstance().getTimeInMillis()));
                 list.add(captureModel);
-                LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+                LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
                 list = new ArrayList<>();
                 timestamp = Calendar.getInstance().getTimeInMillis();
@@ -462,6 +506,11 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+
+    /**
+     *
+     * @param location
+     */
     public void onLocationChanged(Location location) {
         try {
             captureModel.setLat(String.valueOf(location.getLatitude()));
@@ -472,8 +521,8 @@ public class LocationService extends Service implements SensorEventListener {
             captureModel.setCallSatate(callState);
             list.add(captureModel);
             increaseScore();
-            if (Calendar.getInstance().getTimeInMillis() - timestamp > (UserDataWrapper.getInstance().getUploadTime() * 1000)) {
-                LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+            if (Calendar.getInstance().getTimeInMillis() - timestamp > (UserDataWrapper.getInstance(getApplicationContext()).getUploadTime() * 1000)) {
+                LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
                 ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
                 list = new ArrayList<>();
                 timestamp = Calendar.getInstance().getTimeInMillis();
@@ -493,6 +542,11 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     * @param location
+     * @return
+     */
     public String getAddress(Location location) {
         try {
             Geocoder geocoder;
@@ -506,11 +560,14 @@ public class LocationService extends Service implements SensorEventListener {
         return "";
     }
 
+    /**
+     *
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
         try {
-            LocationDataWrapper.getInstance().saveCacheData(new Gson().toJson(list));
+            LocationDataWrapper.getInstance(getApplicationContext()).saveCacheData(new Gson().toJson(list));
             ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_LOCATION));
             ThreadManager.getInstance().addToQue(new UploadCaptureData(UPLOAD_STEPS));
             if(sensorManager!=null) {
@@ -534,6 +591,10 @@ public class LocationService extends Service implements SensorEventListener {
             e.printStackTrace();
         }
     }
+
+    /**
+     *
+     */
     public class StartAsync extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -564,6 +625,9 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     */
     class StateListener extends PhoneStateListener {
         @Override
         public void onCallStateChanged(int state, String incomingNumber) {
@@ -582,6 +646,9 @@ public class LocationService extends Service implements SensorEventListener {
         }
     }
 
+    /**
+     *
+     */
     public void requestActivityUpdatesButtonHandler() {
         mActivityRecognitionClient = new ActivityRecognitionClient(this);
         Task<Void> task = mActivityRecognitionClient.requestActivityUpdates(
@@ -604,6 +671,9 @@ public class LocationService extends Service implements SensorEventListener {
     }
 
 
+    /**
+     *
+     */
     public void removeActivityUpdatesButtonHandler() {
         Task<Void> task = mActivityRecognitionClient.removeActivityUpdates(
                 getActivityDetectionPendingIntent());

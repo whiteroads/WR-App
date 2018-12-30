@@ -197,7 +197,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                     if (intent.getStringExtra(IntentConstants.address) != null) {
                         listener.onAddressChange(intent.getStringExtra(IntentConstants.address));
                     }
-                    listener.onScoreChange((int) UserDataWrapper.getInstance().getRandomScore());
+                    listener.onScoreChange((int) UserDataWrapper.getInstance(context).getRandomScore());
                 }else {
                     String coord = "";
                     if (intent.getStringExtra(IntentConstants.lat) != null) {
@@ -228,7 +228,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
     private void basicSetup(){
         try{
             displayLocationSettingsRequest(context);
-            UserDataWrapper.getInstance().setIsServicesStopped(false);
+            UserDataWrapper.getInstance(context).setIsServicesStopped(false);
             try {
 //            try {
 //                FirebaseApp.initializeApp(context);
@@ -237,7 +237,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
 //            }
                 eventBus = new EventBus();
                 eventBus.register(this);
-                if(UserDataWrapper.getInstance().getUserId()<1) {
+                if(UserDataWrapper.getInstance(context).getUserId()<1) {
                     new ConfigureLogin(UPLOAD_DATA, data).start();
                 }else{
                     startAllServices();
@@ -251,7 +251,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
     }
     public boolean stopAllServices(){
         try{
-            UserDataWrapper.getInstance().setIsServicesStopped(true);
+            UserDataWrapper.getInstance(context).setIsServicesStopped(true);
             if(sensors!=null) {
                 context.stopService(sensors);
             }
@@ -270,7 +270,7 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 createNotificationChannel();
             }
-            UserDataWrapper.getInstance().setIsServicesStopped(false);
+            UserDataWrapper.getInstance(context).setIsServicesStopped(false);
             if (ContextCompat.checkSelfPermission(context,
                     android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     || ActivityCompat.checkSelfPermission(context,
@@ -335,53 +335,57 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
         }
     }
     public void displayLocationSettingsRequest(final Activity context) {
-        GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context)
-                .addApi(LocationServices.API).build();
-        googleApiClient.connect();
+        try {
+            GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context)
+                    .addApi(LocationServices.API).build();
+            googleApiClient.connect();
 
-        LocationRequest locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(0);
-        locationRequest.setFastestInterval(0);
+            LocationRequest locationRequest = LocationRequest.create();
+            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+            locationRequest.setInterval(0);
+            locationRequest.setFastestInterval(0);
 
-        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder().addLocationRequest(locationRequest);
-        builder.setAlwaysShow(true);
+            LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder().addLocationRequest(locationRequest);
+            builder.setAlwaysShow(true);
 
-        PendingResult<LocationSettingsResult> result = LocationServices.SettingsApi.checkLocationSettings(googleApiClient, builder.build());
-        result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
-            @Override
-            public void onResult(LocationSettingsResult result) {
-                final Status status = result.getStatus();
-                switch (status.getStatusCode()) {
-                    case LocationSettingsStatusCodes.SUCCESS:
-                        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-                            Intent service = new Intent(context, LocationService.class);
-                            context.startService(service);
-                        } else {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            PendingResult<LocationSettingsResult> result = LocationServices.SettingsApi.checkLocationSettings(googleApiClient, builder.build());
+            result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+                @Override
+                public void onResult(LocationSettingsResult result) {
+                    final Status status = result.getStatus();
+                    switch (status.getStatusCode()) {
+                        case LocationSettingsStatusCodes.SUCCESS:
+                            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
                                 Intent service = new Intent(context, LocationService.class);
-                                context.startForegroundService(service);
+                                context.startService(service);
+                            } else {
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                    Intent service = new Intent(context, LocationService.class);
+                                    context.startForegroundService(service);
+                                }
                             }
-                        }
-                        Log.i(TAG, "All location settings are satisfied.");
-                        break;
-                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
-                        Log.i(TAG, "Location settings are not satisfied. Show the user a dialog to upgrade location settings ");
+                            Log.i(TAG, "All location settings are satisfied.");
+                            break;
+                        case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                            Log.i(TAG, "Location settings are not satisfied. Show the user a dialog to upgrade location settings ");
 
-                        try {
-                            // Show the dialog by calling startResolutionForResult(), and check the result
-                            // in onActivityResult().
-                            status.startResolutionForResult(context, 100);
-                        } catch (IntentSender.SendIntentException e) {
-                            Log.i(TAG, "PendingIntent unable to execute request.");
-                        }
-                        break;
-                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                        Log.i(TAG, "Location settings are inadequate, and cannot be fixed here. Dialog not created.");
-                        break;
+                            try {
+                                // Show the dialog by calling startResolutionForResult(), and check the result
+                                // in onActivityResult().
+                                status.startResolutionForResult(context, 100);
+                            } catch (IntentSender.SendIntentException e) {
+                                Log.i(TAG, "PendingIntent unable to execute request.");
+                            }
+                            break;
+                        case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                            Log.i(TAG, "Location settings are inadequate, and cannot be fixed here. Dialog not created.");
+                            break;
+                    }
                 }
-            }
-        });
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -436,21 +440,23 @@ public class StartService implements ActivityCompat.PermissionCompatDelegate{
                     e.printStackTrace();
                 }
                 try {
-                    BatteryManager mBatteryManager = (BatteryManager) context.getSystemService(Context.BATTERY_SERVICE);
-                    Long currentNow = null;
-                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        BatteryManager mBatteryManager = (BatteryManager) context.getSystemService(Context.BATTERY_SERVICE);
+                        Long currentNow = null;
                         currentNow = mBatteryManager.getLongProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW);
+                        userModel.setBattery_cap(String.valueOf(currentNow));
                     }
-                    userModel.setBattery_cap(String.valueOf(currentNow));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 try {
-                    ActivityManager actManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-                    ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
-                    actManager.getMemoryInfo(memInfo);
-                    long totalMemory = memInfo.totalMem;
-                    userModel.setRAM((int) totalMemory);
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        ActivityManager actManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+                        ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
+                        actManager.getMemoryInfo(memInfo);
+                        long totalMemory = memInfo.totalMem;
+                        userModel.setRAM((int) totalMemory);
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -2,7 +2,7 @@ package com.whiteroads.library.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.whiteroads.library.LibraryApplication;
+
 import com.whiteroads.library.constants.ActivityContants;
 import com.google.android.gms.location.DetectedActivity;
 
@@ -28,14 +28,14 @@ public class UserDataWrapper {
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
 
-    private UserDataWrapper() {
-        mPreferences = (LibraryApplication.getCustomAppContext()).getSharedPreferences(DATABASE_NAME, Context.MODE_PRIVATE);
+    private UserDataWrapper(Context context) {
+        mPreferences = (context).getSharedPreferences(DATABASE_NAME, Context.MODE_PRIVATE);
         mEditor = mPreferences.edit();
     }
 
-    public static UserDataWrapper getInstance() {
+    public static UserDataWrapper getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new UserDataWrapper();
+            sInstance = new UserDataWrapper(context);
         }
         return sInstance;
     }

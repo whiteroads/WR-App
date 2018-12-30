@@ -1,64 +1,52 @@
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-loginkit-4.36.0.aar/29a3f72c278961729233a28ec2642850/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/9c7341a4c24acfdbb92b7e8b0d261d93/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-sdk-6.8.1.aar/e98f655561395c84a12e9f741950873c/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/29c7c65fd6ede825b263bdabe747c934/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-telemetry-3.5.7.aar/4e5f930663ddd7e411405609c53e5752/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/be30b9a48c0c9c08a6c4b27e693ecd67/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/ed26a6bb90436eb723d85e08b18a95dd/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-login-4.36.0.aar/971f3a8851d829bc5e2dadc493b484a0/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/b253670de94548eb7db246e4d9d48b94/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/7cd4a1008981d9ba1629a7618b5019e1/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/0c06c0d4919cb6e33a6423b066674275/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/73d66a5e5d0fbddd82dde7045fdfdc63/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6425ce382d5b608b9b89ee447c0a06f8/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/4e6ba0d70832b7a6ef385363f9795b01/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/0278e3ac4b1c0578aa987e0524b309b8/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/a0ec32d2ab45bd07377e9f2352d5013c/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/5a1f8cb9675ff162ae08d15a11ddfeae/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/0b9aa91301b4e1786a2b81ba041f9947/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/ed76ff1ea93a5eed91edf97df82dde26/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4d762071ca76b958c3184852230ca4af/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-sdk-turf/3.4.1/a38f9ea3dde3936ee8d22d3cd6ff895edfd3b78c/mapbox-sdk-turf-3.4.1.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-sdk-geojson/3.4.1/d134e7851f8fe5e69094cebb5efe347b62640159/mapbox-sdk-geojson-3.4.1.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-gestures-0.3.0.aar/0afb8b554a6b3711b8e3dab0a39f1844/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-core-4.36.0.aar/faffce9fa470ba20a9d4c8214f1e905e/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/d54f728a89c6ed58bdc948e98420becb/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/3d12781c5d3498ff99d5d1f462d1760f/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/7a1aab2e6a10ac32f3fbcbb9993cce8d/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-loginkit-4.36.0.aar/7ca66b47ad178e61e16cc0f6903c388d/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/9fba5c2654c0db5d4c33fbfb89e75bd1/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/d8379a9cefe194869e07de63b86e1eb3/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-login-4.36.0.aar/f06f5355a627decf0a04d24f54aa3f13/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/0f91eeb6c6df9f387a5bafa994218dae/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/e2bd420a39936741c849dd9c7bee8830/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/654807998c9c784761e9bdee9c869624/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/bab55e3101c6c9e475ba695b596f1750/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/b3e418869d442bcde8bd1de6eec982d8/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/89c7d8cf12313c041e63899eec67d27e/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/8909f91344fbcca68b2b26050ef0deb1/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/4ce014fd4377df1d2d2ffdcbc6995189/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/5c0b3d08abcc97c658d68355e2c52721/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/58c2db82d6a2709682d3a26cc7992008/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/dee0d54a51953b43d45eaf780a7412fc/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/d4546073b6f1de33874beeec834033d5/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a519d713ef09d68354ed89c7fc7cc828/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/56b19cb7d747b47c1be78d617d03aa7d/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/e77ac3e26c3bd2754c91adb439246155/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-core-4.36.0.aar/2e9efe6c7c8ea5d5d0a39aaa516ecc51/jars/classes.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/common/1.1.1/8094cc50760b9ac665a8ea76b51888f70042e2b5/common-1.1.1.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/67bfe2487858e4a84abff70108beee02/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/ae1ea60adcd57c74f4e1dc84bbea59bb/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/46448f8b54756b0b866ca605754b316c/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/d5b60c09949d7fef1d252b897d62fc8a/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/dec0121f83d157c83f30135813c68752/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/032e8c727b1fc822e9e81c57a48ffe80/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/bfc0fbd428786c72ab4d1fffd3b17ef6/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/48ed8dc3ac08665b73d53e7f88beffff/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e23864245147abdc8d839c0e785fe813/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9c470b469edd032690f17178eb6f8157/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.1.0/edf3f7bfb84a7521d0599efa3b0113a0ee90f85/common-1.1.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c40c427c831e937b10c8782c1304bf97/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/2519018cc703202c54019c734a25eb46/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/114c3d713a1778cd4634b2ec1eed440f/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/e98c7ec8e37770c072007769b81e6ded/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/1a23c9e1a35b13a5557ec7567a97a405/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/38cdd4410022fffc87ae949dc0cd0d5c/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/6cc643f8d98ad7c67ac45c2591ca4c63/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/fbf2e1b65b3dec235226c421216317d7/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/177dffaa06484a5366e08509cef5817e/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/53068360adcd35679cae7cf225c9aff0/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6988d9299af3a41c8d17ae3c22d3bede/jars/classes.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.1.1/39ded76b5e1ce1c5b2688e1d25cdc20ecee32007/support-annotations-27.1.1.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-sdk-core/3.4.1/475a2a10150372a52129cd5f30c05545aa72f820/mapbox-sdk-core-3.4.1.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.11.0/f24576b8fd39d34149654df9702f070042083b65/logging-interceptor-3.11.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.4.0/15d7790ee311d961379c51b00aba12d5967cb7ea/converter-gson-2.4.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.4.0/fc4aa382632bfaa7be7b41579efba41d5a71ecf3/retrofit-2.4.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.11.0/75966e05a49046ca2ae734e5626f28837a8d1e82/okhttp-3.11.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.3.0/9e09011e9767bb76b5e27c9b8223476b93b14631/converter-gson-2.3.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/libphonenumber/8.9.10/633a1c3328ac15549b7ebff8f437ed90f09c237d/libphonenumber-8.9.10.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-core-0.2.1.aar/df6e803402f8b68e05c592f0516c17a0/jars/classes.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/933ad022a2440a9e29efbe066b401ec0/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.1/c1a6655cebcac68e63e4c24d23f573035032eb2a/annotations-16.0.1.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar(**.class)
 -injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar(**.class)
--injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/102d7be47241d781ef95f1581d414b0943053130/okio-1.14.0.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/226bc06f146b5b2389e3aa430239553c/jars/classes.jar(**.class)
+-injars /Users/rahulgoyal/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.1.0/edf3f7bfb84a7521d0599efa3b0113a0ee90f85/common-1.1.0.jar(**.class)
 -injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/wr-library/build/intermediates/intermediate-jars/release/classes.jar(**.class)
 -injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes(**.class)
 -injars /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/transforms/mergeJavaRes/release/0.jar(!**.class)
@@ -78,10 +66,10 @@
 -printmapping /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/mapping.txt
 -dontusemixedcaseclassnames
 -repackageclasses ''
--keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod,*Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,Signature,*Annotation*,EnclosingMethod,*Annotation*,*Annotation*,*Annotation*
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod,*Annotation*,EnclosingMethod,Signature,InnerClasses,SourceFile,LineNumberTable,*Annotation*,JavascriptInterface,Signature,Exceptions,*Annotation*,*Annotation*,*Annotation*
 -verbose
--dontnote com.android.vending.licensing.ILicensingService,com.google.vending.licensing.ILicensingService,com.google.android.vending.licensing.ILicensingService,android.support.**,androidx.**,org.apache.http.**,android.net.http.**,java.lang.invoke.**,com.google.gson.**,com.mapbox.mapboxsdk.maps.MapboxMap$OnFpsChangedListener,com.mapbox.mapboxsdk.style.layers.PropertyValue,com.mapbox.mapboxsdk.maps.MapboxMap,com.mapbox.mapboxsdk.maps.MapboxMapOptions,com.mapbox.mapboxsdk.log.LoggerDefinition,com.mapbox.android.core.location.LocationEnginePriority,okhttp3.internal.**,org.robolectric.Robolectric,libcore.io.Memory,com.google.protobuf.**,android.net.**,org.apache.http.**,okhttp3.internal.platform.**,sun.misc.Unsafe,android.net.http.**,org.apache.http.**
--dontwarn android.support.**,androidx.**,android.util.FloatMath,javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,com.gc.materialdesign.views.**,com.parse.**,com.facebook.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,okio.**,retrofit2.Platform$Java8,javax.annotation.**,org.codehaus.**,com.google.auto.value.**,com.sun.xml.internal.ws.spi.db.*,android.arch.persistence.room.paging.**,javax.annotation.**,org.codehaus.mojo.animal_sniffer.*,okhttp3.internal.platform.ConscryptPlatform,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**,com.google.android.gms.**,org.jetbrains.annotations.**
+-dontnote com.android.vending.licensing.ILicensingService,com.google.vending.licensing.ILicensingService,com.google.android.vending.licensing.ILicensingService,android.support.**,androidx.**,org.apache.http.**,android.net.http.**,java.lang.invoke.**
+-dontwarn android.support.**,androidx.**,android.util.FloatMath,javax.annotation.Nullable,javax.annotation.ParametersAreNonnullByDefault,com.gc.materialdesign.views.**,com.parse.**,com.facebook.**,org.apache.**,android.webkit.**,java.nio.file.Files,java.nio.file.Path,java.nio.file.OpenOption,android.support.**,com.google.api.**,com.google.android.gms.**,com.google.api.**,com.google.common.**,okio.**,retrofit2.Platform$Java8,com.whiteroads.library.**,android.arch.persistence.room.paging.**,android.security.NetworkSecurityPolicy,android.app.Notification,sun.misc.Unsafe,libcore.io.Memory,com.google.android.apps.common.proguard.UsedBy*,javax.annotation.**,org.checkerframework.**
 -printconfiguration /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/config.txt
 -printseeds /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/outputs/mapping/release/seeds.txt
 
@@ -174,11 +162,6 @@
     <init>(...);
 }
 
--keep public class com.whiteroads.** {
-    <fields>;
-    <methods>;
-}
-
 -keep class com.parse.* {
     <fields>;
     <methods>;
@@ -195,6 +178,11 @@
 }
 
 -keep public class org.apache.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.whiteroads.** {
     <fields>;
     <methods>;
 }
@@ -321,11 +309,6 @@
     <methods>;
 }
 
--keep public class com.whiteroads.library.** {
-    <fields>;
-    <methods>;
-}
-
 -keep class * extends java.util.ListResourceBundle {
     protected Object[][] getContents();
 }
@@ -361,122 +344,122 @@
     public static final ** CREATOR;
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:141
--keep class android.arch.lifecycle.ProcessLifecycleOwnerInitializer {
-    <init>(...);
+-keepclassmembers class com.whiteroads.library.** {
+    <fields>;
+    <methods>;
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:170
+-keep class com.whiteroads.library.** {
+    <fields>;
+    <methods>;
+}
+
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:156
 -keep class com.facebook.CurrentAccessTokenExpirationBroadcastReceiver {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:69
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:62
 -keep class com.facebook.CustomTabActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:147
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:133
 -keep class com.facebook.CustomTabMainActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:64
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:57
 -keep class com.facebook.FacebookActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:100
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:93
 -keep class com.facebook.accountkit.internal.AccountKitInitProvider {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:81
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:74
 -keep class com.facebook.accountkit.ui.AccountKitActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:87
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:80
 -keep class com.facebook.accountkit.ui.AccountKitEmailRedirectActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:165
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:151
 -keep class com.facebook.internal.FacebookInitProvider {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:114
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:107
 -keep class com.google.android.gms.auth.api.signin.RevocationBoundService {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:105
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:98
 -keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:148
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:134
 -keep class com.google.android.gms.common.api.GoogleApiActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:139
--keep class com.mapbox.android.telemetry.TelemetryService {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:33
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:25
 -keep class com.whiteroads.application.DAApplication {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:44
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:37
 -keep class com.whiteroads.application.HomeActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:57
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:50
 -keep class com.whiteroads.application.LoginActivity {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:119
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:112
 -keep class com.whiteroads.library.receivers.SensorRestartBroadcastReceiver {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:137
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:130
 -keep class com.whiteroads.library.services.DetectedActivitiesIntentService {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:129
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:122
 -keep class com.whiteroads.library.services.LocationService {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:125
+# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:118
 -keep class com.whiteroads.library.services.SensorService {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_bottom_navigation_item.xml:26
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_bottom_navigation_item.xml:26
 -keep class android.support.design.internal.BaselineLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_navigation_item.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_navigation_item.xml:17
 -keep class android.support.design.internal.NavigationMenuItemView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_navigation_menu.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_navigation_menu.xml:17
 -keep class android.support.design.internal.NavigationMenuView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_layout_snackbar_include.xml:18
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_layout_snackbar_include.xml:18
 -keep class android.support.design.internal.SnackbarContentLayout {
     <init>(...);
 }
@@ -486,191 +469,175 @@
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_text_input_password_icon.xml:18
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_text_input_password_icon.xml:18
 -keep class android.support.design.widget.CheckableImageButton {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_bottom_sheet_dialog.xml:26
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_bottom_sheet_dialog.xml:26
 -keep class android.support.design.widget.CoordinatorLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/b3afc7705910b2d22f0cb3cc41f4e1a0/res/layout/design_layout_snackbar.xml:18
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f01c0a4577e440ece55f533cd79cd5f4/res/layout/design_layout_snackbar.xml:18
 -keep class android.support.design.widget.Snackbar$SnackbarLayout {
     <init>(...);
 }
 
 # Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/fragment_sensors.xml:1
 # Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/fragment_analysis.xml:1
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_material.xml:41
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_material.xml:41
 -keep class android.support.v4.widget.NestedScrollView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_title_material.xml:56
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_material.xml:52
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_button_bar_material.xml:43
--keep class android.support.v4.widget.Space {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_select_dialog_material.xml:23
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_select_dialog_material.xml:23
 -keep class android.support.v7.app.AlertController$RecycleListView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_action_menu_item_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_action_menu_item_layout.xml:17
 -keep class android.support.v7.view.menu.ActionMenuItemView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_expanded_menu_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_expanded_menu_layout.xml:17
 -keep class android.support.v7.view.menu.ExpandedMenuView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_popup_menu_item_layout.xml:17
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_list_menu_item_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_popup_menu_item_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_list_menu_item_layout.xml:17
 -keep class android.support.v7.view.menu.ListMenuItemView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_toolbar.xml:27
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_toolbar.xml:27
 -keep class android.support.v7.widget.ActionBarContainer {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_toolbar.xml:43
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_action_mode_bar.xml:19
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_toolbar.xml:43
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_action_mode_bar.xml:19
 -keep class android.support.v7.widget.ActionBarContextView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_toolbar.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_toolbar.xml:17
 -keep class android.support.v7.widget.ActionBarOverlayLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_action_menu_layout.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_action_menu_layout.xml:17
 -keep class android.support.v7.widget.ActionMenuView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_activity_chooser_view.xml:19
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_activity_chooser_view.xml:19
 -keep class android.support.v7.widget.ActivityChooserView$InnerLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_material.xml:18
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_material.xml:18
 -keep class android.support.v7.widget.AlertDialogLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-sdk-6.8.1.aar/e98f655561395c84a12e9f741950873c/res/layout/mapbox_mapview_internal.xml:17
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/b253670de94548eb7db246e4d9d48b94/res/layout/com_facebook_smart_device_dialog_fragment.xml:47
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/b253670de94548eb7db246e4d9d48b94/res/layout/com_facebook_device_auth_dialog_fragment.xml:45
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/0f91eeb6c6df9f387a5bafa994218dae/res/layout/com_facebook_smart_device_dialog_fragment.xml:47
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/0f91eeb6c6df9f387a5bafa994218dae/res/layout/com_facebook_device_auth_dialog_fragment.xml:45
 -keep class android.support.v7.widget.AppCompatImageView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_button_bar_material.xml:26
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_button_bar_material.xml:26
 -keep class android.support.v7.widget.ButtonBarLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/b253670de94548eb7db246e4d9d48b94/res/layout/com_facebook_smart_device_dialog_fragment.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/b253670de94548eb7db246e4d9d48b94/res/layout/com_facebook_device_auth_dialog_fragment.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/0f91eeb6c6df9f387a5bafa994218dae/res/layout/com_facebook_smart_device_dialog_fragment.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/facebook-common-4.36.0.aar/0f91eeb6c6df9f387a5bafa994218dae/res/layout/com_facebook_device_auth_dialog_fragment.xml:22
 -keep class android.support.v7.widget.CardView {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_content_include.xml:19
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_content_include.xml:19
 -keep class android.support.v7.widget.ContentFrameLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_alert_dialog_title_material.xml:45
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_title_material.xml:45
 -keep class android.support.v7.widget.DialogTitle {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_simple_overlay_action_mode.xml:23
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_simple_overlay_action_mode.xml:23
 -keep class android.support.v7.widget.FitWindowsFrameLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_simple.xml:17
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_dialog_title_material.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_simple.xml:17
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_dialog_title_material.xml:22
 -keep class android.support.v7.widget.FitWindowsLinearLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_search_view.xml:75
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_search_view.xml:75
 -keep class android.support.v7.widget.SearchView$SearchAutoComplete {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_toolbar.xml:36
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_toolbar.xml:36
 -keep class android.support.v7.widget.Toolbar {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_simple_overlay_action_mode.xml:32
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/110d0f24c5c21274fd23e44807e7e437/res/layout/abc_screen_simple.xml:25
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_simple_overlay_action_mode.xml:32
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_screen_simple.xml:25
 -keep class android.support.v7.widget.ViewStubCompat {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_phone_login_top.xml:31
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_title_material.xml:56
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_material.xml:52
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7070a0a7fa32199e1d6ca5b3cd347aa/res/layout/abc_alert_dialog_button_bar_material.xml:43
+-keep class android.widget.Space {
+    <init>(...);
+}
+
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_phone_login_top.xml:31
 -keep class com.facebook.accountkit.ui.AccountKitSpinner {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_activity_layout.xml:26
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_activity_layout.xml:26
 -keep class com.facebook.accountkit.ui.AspectFrameLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_email_login_top.xml:29
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_email_login_top.xml:29
 -keep class com.facebook.accountkit.ui.ClearBackgroundTextInputLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_title.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_resend_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_phone_login_top.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_phone_login_text.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_phone_login_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_error_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_email_verify_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_email_login_top.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_email_login_text.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_email_login_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_confirmation_code_top.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml:22
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_activity_layout.xml:47
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_title.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_resend_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_phone_login_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_phone_login_text.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_phone_login_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_error_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_email_verify_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_email_login_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_email_login_text.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_email_login_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_confirmation_code_top.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_fragment_confirmation_code_bottom.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_activity_layout.xml:47
 -keep class com.facebook.accountkit.ui.ConstrainedLinearLayout {
     <init>(...);
 }
 
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/e29f7d1700c73d5f8bb97006efc0661f/res/layout/com_accountkit_confirmation_code_input.xml:22
+# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/account-kit-sdk-4.36.0.aar/44498359c0f86a860f925b5c33f4f345/res/layout/com_accountkit_confirmation_code_input.xml:22
 -keep class com.facebook.accountkit.ui.NotifyingEditText {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-sdk-6.8.1.aar/e98f655561395c84a12e9f741950873c/res/layout/mapbox_infowindow_content.xml:2
--keep class com.mapbox.mapboxsdk.annotations.BubbleLayout {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/Codes/whiteroads/wr-android/WR-App/app/src/main/res/layout/fragment_sensors.xml:323
--keep class com.mapbox.mapboxsdk.maps.MapView {
-    <init>(...);
-}
-
-# Referenced at /Users/rahulgoyal/.gradle/caches/transforms-1/files-1.1/mapbox-android-sdk-6.8.1.aar/e98f655561395c84a12e9f741950873c/res/layout/mapbox_mapview_internal.xml:11
--keep class com.mapbox.mapboxsdk.maps.widgets.CompassView {
     <init>(...);
 }
 
@@ -701,40 +668,26 @@
     void logSdkEvent(java.lang.String,java.lang.Double,android.os.Bundle);
 }
 
-# Reflection on classes from native code
--keep class com.google.gson.JsonArray {
-    <fields>;
-    <methods>;
-}
-
--keep class com.google.gson.JsonElement {
-    <fields>;
-    <methods>;
-}
-
--keep class com.google.gson.JsonObject {
-    <fields>;
-    <methods>;
-}
-
--keep class com.google.gson.JsonPrimitive {
-    <fields>;
-    <methods>;
-}
-
-# config for mapbox-sdk-geojson:3.0.1
--keep class com.mapbox.geojson.** {
-    <fields>;
-    <methods>;
+# Copyright (C) 2015 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# CoordinatorLayout resolves the behaviors of its child components with reflection.
+-keep public class * extends android.support.design.widget.CoordinatorLayout$Behavior {
+    public <init>(android.content.Context,android.util.AttributeSet);
+    public <init>();
 }
 
 -keep public class * extends android.arch.persistence.room.RoomDatabase
-
--keep,allowshrinking class okhttp3.internal.publicsuffix.PublicSuffixDatabase
-
--keep class * extends android.arch.lifecycle.AndroidViewModel {
-    <init>(android.app.Application);
-}
 
 # To enable ProGuard in your project, edit project.properties
 # to define the proguard.config property as described in that file.
@@ -800,7 +753,7 @@
 
 -keep class com.facebook.common.Common
 
-# Copyright (C) 2015 The Android Open Source Project
+# Copyright (C) 2018 The Android Open Source Project
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -813,11 +766,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# CoordinatorLayout resolves the behaviors of its child components with reflection.
--keep public class * extends android.support.design.widget.CoordinatorLayout$Behavior {
-    public <init>(android.content.Context,android.util.AttributeSet);
-    public <init>();
-}
+# Ensure that reflectively-loaded inflater is not obfuscated. This can be
+# removed when we stop supporting AAPT1 builds.
+-keep,allowshrinking class android.support.v7.app.AppCompatViewInflater
 
 # b/35135904 Ensure that proguard will not strip the mResultGuardian.
 -keepclassmembers class com.google.android.gms.common.api.internal.BasePendingResult {
@@ -876,6 +827,64 @@
     public <methods>;
 }
 
+# Copyright (C) 2015 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# When layoutManager xml attribute is used, RecyclerView inflates
+# LayoutManagers' constructors using reflection.
+-keep public class * extends android.support.v7.widget.RecyclerView$LayoutManager {
+    public <init>(...);
+}
+
+# Copyright (C) 2017 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# FragmentTransitionSupport is instantiated in support-fragment via reflection.
+-keep public class android.support.transition.FragmentTransitionSupport
+
+# Keep a field in transition that is used to keep a reference to weakly-referenced object
+-keepclassmembers class android.support.transition.ChangeBounds$* extends android.animation.AnimatorListenerAdapter {
+    android.support.transition.ChangeBounds$ViewBounds mViewBounds;
+}
+
+# Copyright (C) 2017 The Android Open Source Project
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Prevent Parcelable objects from being removed or renamed.
+-keep class android.support.v4.media.** extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
 # To enable ProGuard in your project, edit project.properties
 # to define the proguard.config property as described in that file.
 # 
@@ -932,64 +941,6 @@
     *** get*();
 }
 
-# Copyright (C) 2017 The Android Open Source Project
-# 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-# 
-#      http://www.apache.org/licenses/LICENSE-2.0
-# 
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# Prevent Parcelable objects from being removed or renamed.
--keep class android.support.v4.media.** extends android.os.Parcelable {
-    public static final android.os.Parcelable$Creator *;
-}
-
-# Copyright (C) 2015 The Android Open Source Project
-# 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-# 
-#      http://www.apache.org/licenses/LICENSE-2.0
-# 
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# When layoutManager xml attribute is used, RecyclerView inflates
-# LayoutManagers' constructors using reflection.
--keep public class * extends android.support.v7.widget.RecyclerView$LayoutManager {
-    public <init>(...);
-}
-
-# Copyright (C) 2017 The Android Open Source Project
-# 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-# 
-#      http://www.apache.org/licenses/LICENSE-2.0
-# 
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# FragmentTransitionSupport is instantiated in support-fragment via reflection.
--keep public class android.support.transition.FragmentTransitionSupport
-
-# Keep a field in transition that is used to keep a reference to weakly-referenced object
--keepclassmembers class android.support.transition.ChangeBounds$* extends android.animation.AnimatorListenerAdapter {
-    android.support.transition.ChangeBounds$ViewBounds mViewBounds;
-}
-
 # Copyright (C) 2016 The Android Open Source Project
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -1028,13 +979,6 @@
 
 -keep class * extends android.arch.lifecycle.ViewModel {
     <init>();
-}
-
-# Consumer proguard rules for libcore
-# --- GMS ---
--keep class com.google.android.gms.** {
-    <fields>;
-    <methods>;
 }
 
 -assumenosideeffects class android.util.Log {

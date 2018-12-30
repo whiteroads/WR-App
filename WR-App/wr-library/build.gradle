@@ -1,72 +1,39 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
-//publish {
+group='com.github.whiteroads'
+
+//ext {
+//    bintrayRepo = 'Whiteroads'
+//    bintrayName = 'Whiteroads'
 //
-//    def groupProjectID = 'com.whiteroads.library'
-//    def artifactProjectID = 'analytics'
-//    def publishVersionID = '1.0.0'
+//    publishedGroupId = 'com.whiteroads.library'
+//    libraryName = 'WrLibrary'
+//    artifact = 'wr-library'
 //
-//    userOrg = 'whiteroads'
-//    repoName = 'Whiteroads'
-//    groupId = groupProjectID
-//    artifactId = artifactProjectID
-//    bintrayUser = 'whiteroads'
-//    bintrayKey = '5319246eaa267b6c55db6ef95c2274f03a396f8c'
-//    publishVersion = publishVersionID
-//    desc = 'No Description'
-//    website = 'https://github.com/whiteroads18/analytics'
+//    libraryDescription = 'No Description'
 //
-//    // Step 2: Add the custom publication details like below
-//    publishing {
-//        publications {
-//            MyPub(MavenPublication) {
-//                groupId 'com.whiteroads.library'
-//                artifactId 'analytics'
-//                version '1.0.0'
-//            }
-//        }
-//    }
+//    siteUrl = 'https://whiteroads@bitbucket.org/whiteroads/wr-android'
+//    gitUrl = 'https://whiteroads@bitbucket.org/whiteroads/wr-android.git'
 //
-//    //Step 3: don't forget to add your custom publication
-//    publications = ['MyPub']
+//    libraryVersion = '1.0.1'
 //
+//    developerId = 'whiteroads'
+//    developerName = 'whiteroads'
+//    developerEmail = 'admin@whiteroads.ai'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
 //}
-
-ext {
-    bintrayRepo = 'Whiteroads'
-    bintrayName = 'Whiteroads'
-
-    publishedGroupId = 'com.whiteroads.library'
-    libraryName = 'WrLibrary'
-    artifact = 'wr-library'
-
-    libraryDescription = 'No Description'
-
-    siteUrl = 'https://github.com/whiteroads18/analytics'
-    gitUrl = 'https://github.com/whiteroads18/analytics.git'
-
-    libraryVersion = '1.0.0'
-
-    developerId = 'whiteroads'
-    developerName = 'whiteroads'
-    developerEmail = 'admin@whiteroads.ai'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
 
 
 android {
     compileSdkVersion 27
-
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0_library"
-        resConfig "en"
-        resConfigs "mdpi"
+        versionCode 2
+        versionName "1.0.1"
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.schemaLocation":
@@ -79,17 +46,19 @@ android {
                     files("$projectDir/schemas".toString())
         }
     }
-
     buildTypes {
         release {
-            minifyEnabled true
-            zipAlignEnabled false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard.cfg'
             debuggable false
         }
+        debug {
+            minifyEnabled false
+            debuggable false
+        }
     }
-
+    buildToolsVersion '28.0.3'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -99,17 +68,16 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.android.support:support-v4:27.0.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-media-compat:27.1.1'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-    //    implementation 'com.google.firebase:firebase-config:16.1.0'
-    //    implementation 'com.google.firebase:firebase-core:16.0.4'
     implementation 'de.greenrobot:eventbus:2.4.0'
-    //    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
-    //    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

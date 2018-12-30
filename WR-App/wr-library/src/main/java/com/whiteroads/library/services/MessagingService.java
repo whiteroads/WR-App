@@ -21,14 +21,14 @@
 //    public void onMessageReceived(RemoteMessage remoteMessage) {
 //        super.onMessageReceived(remoteMessage);
 //        try{
-//            if(UserDataWrapper.getInstance().isServiceStopped()){
-//                UserDataWrapper.getInstance().setIsServicesStopped(false);
+//            if(UserDataWrapper.getInstance(getApplicationContext())().isServiceStopped()){
+//                UserDataWrapper.getInstance(getApplicationContext())().setIsServicesStopped(false);
 //            }
 //            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
 //                sensors = new Intent(getApplicationContext(), SensorService.class);
 //                pIntent = PendingIntent.getService(this, 0, sensors, PendingIntent.FLAG_UPDATE_CURRENT);
 //                alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-//                alarm.set(AlarmManager.RTC_WAKEUP,Calendar.getInstance().getTimeInMillis(), pIntent);
+//                alarm.set(AlarmManager.RTC_WAKEUP,Calendar.getInstance(getApplicationContext())().getTimeInMillis(), pIntent);
 //                service = new Intent(this, LocationService.class);
 //                startService(service);
 //            }else{
@@ -36,7 +36,7 @@
 //                    sensors = new Intent(getApplicationContext(), SensorService.class);
 //                    pIntent = PendingIntent.getForegroundService(this, 0, sensors, PendingIntent.FLAG_UPDATE_CURRENT);
 //                    alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-//                    alarm.setExact(AlarmManager.RTC_WAKEUP,Calendar.getInstance().getTimeInMillis(), pIntent);
+//                    alarm.setExact(AlarmManager.RTC_WAKEUP,Calendar.getInstance(getApplicationContext())().getTimeInMillis(), pIntent);
 //                    service = new Intent(this, LocationService.class);
 //                    startForegroundService(service);
 //                }
